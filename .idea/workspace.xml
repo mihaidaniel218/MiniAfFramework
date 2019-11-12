@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8250031-a3e3-4737-8438-c0a48aa1c942" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/CucumberFramework/featureFiles/Login.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CucumberFramework/steps/Login.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CucumberFramework/steps/LoginSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestRunner/TestRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/automationpractice/com/pageObject/Clothes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/automationpractice/com/pageObject/Clothes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/automationpractice/com/ShopWorkflowTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/automationpractice/com/ShopWorkflowTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CucumberFramework/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberFramework/steps/LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestRunner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRunner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CucumberFramework/steps/LoginSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CucumberFramework/steps/LoginSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestRunner/TestRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestRunner/TestRunner.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
