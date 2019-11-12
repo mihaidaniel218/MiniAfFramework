@@ -49,21 +49,6 @@ public class Clothes {
         return Utils.waitForElementPresence(driver, By.xpath("//div[@id='block_top_menu']/ul/li[2]/ul//a[@title='Summer Dresses']"), 30);
     }
 
-    /*    *//**@param dressNum (value 1) *//*
-    public WebElement getCasualDressProduct(int dressNum) {
-        return Utils.waitForElementPresence(driver, By.xpath("//*[@id=\"center_column\"]/ul/li[" + dressNum + "]"), 30);
-    }
-
-    *//**@param dressNum (value 1) *//*
-    public WebElement getEveningDressProduct(int dressNum) {
-        return Utils.waitForElementPresence(driver, By.xpath("//*[@id=\"center_column\"]/ul/li[" + dressNum + "]"), 30);
-    }
-
-    *//**@param dressNum (value 1 to 3) *//*
-    public WebElement getSummerDressProduct(int dressNum) {
-        return Utils.waitForElementPresence(driver, By.xpath("//*[@id=\"center_column\"]/ul/li[" + dressNum + "]"), 30);*/
-    //}
-
     /**
      * @param dressNum (value 1 to 3)
      */
@@ -74,27 +59,6 @@ public class Clothes {
     public List<WebElement> getDressesCount() {
         return driver.findElements(By.xpath("//*[@id=\"center_column\"]/ul/li"));
     }
-
-/*    public void buyDress(WebElement dressMenu, WebElement dressProduct, int index, int numOfProductsInCart) {
-        this.dressMenu = dressMenu;
-        this.dressProduct = dressProduct;
-        int i = 1;
-        action.moveToElement(dressMenu).perform();
-        while (i <= getDressesCount().size()) {Assert.assertTrue(getDressProduct(i).isDisplayed()); i += 1;}
-        Assert.assertTrue(dressProduct.isDisplayed());
-        action.moveToElement(dressProduct).perform();
-        dressProduct.click();
-
-        action.moveToElement(getDressProduct(1)).perform();
-        action.moveToElement(shoppingActions.getAddToCartBtn()).perform();
-        action.click(shoppingActions.getAddToCartBtn()).build().perform();
-
-        action.click(shoppingActions.getContinueShopingBtn()).build().perform();
-        action.moveToElement(cart.getCartTab()).perform();
-
-        Assert.assertEquals(cart.getCartProductsQty().size(), numOfProductsInCart);
-
-    }*/
 
 }
 
