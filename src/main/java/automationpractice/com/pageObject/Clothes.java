@@ -4,10 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
 import utils.Utils;
-import automationpractice.com.pageObject.ShoppingActions;
-import automationpractice.com.pageObject.Cart;
+
 
 import java.util.List;
 
@@ -51,7 +49,7 @@ public class Clothes {
         return Utils.waitForElementPresence(driver, By.xpath("//div[@id='block_top_menu']/ul/li[2]/ul//a[@title='Summer Dresses']"), 30);
     }
 
-/*    *//**@param dressNum (value 1) *//*
+    /*    *//**@param dressNum (value 1) *//*
     public WebElement getCasualDressProduct(int dressNum) {
         return Utils.waitForElementPresence(driver, By.xpath("//*[@id=\"center_column\"]/ul/li[" + dressNum + "]"), 30);
     }
@@ -66,7 +64,9 @@ public class Clothes {
         return Utils.waitForElementPresence(driver, By.xpath("//*[@id=\"center_column\"]/ul/li[" + dressNum + "]"), 30);*/
     //}
 
-    /**@param dressNum (value 1 to 3) */
+    /**
+     * @param dressNum (value 1 to 3)
+     */
     public WebElement getDressProduct(int dressNum) {
         return Utils.waitForElementPresence(driver, By.xpath("//*[@id=\"center_column\"]/ul/li[" + dressNum + "]"), 30);
     }

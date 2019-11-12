@@ -34,7 +34,7 @@ public class ShopWorkflowTest {
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS) ;
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         action = new Actions(driver);
 
@@ -138,7 +138,10 @@ public class ShopWorkflowTest {
     private void buyDress(WebElement dressMenu, WebElement dressProduct, int index, int numOfProductsInCart) {
         int i = 1;
         action.moveToElement(dressMenu).perform();
-        while (i <= clothes.getDressesCount().size()) {Assert.assertTrue(clothes.getDressProduct(i).isDisplayed()); i += 1;}
+        while (i <= clothes.getDressesCount().size()) {
+            Assert.assertTrue(clothes.getDressProduct(i).isDisplayed());
+            i += 1;
+        }
         Assert.assertTrue(dressProduct.isDisplayed());
         action.moveToElement(dressProduct).perform();
         dressProduct.click();
@@ -151,8 +154,5 @@ public class ShopWorkflowTest {
         action.moveToElement(cart.getCartTab()).perform();
 
         Assert.assertEquals(cart.getCartProductsQty().size(), numOfProductsInCart);
-
     }
-
-
 }
