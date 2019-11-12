@@ -1,0 +1,1 @@
+Automation framework created in Java/Selenium/TestNG for practice within AutomationPractice.com, it consists of the Page Object Model classes and a simple Shop Workflow which buys 3 types of dresses and asserts that the cart contains the products. 
