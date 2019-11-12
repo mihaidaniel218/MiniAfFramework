@@ -71,68 +71,11 @@ public class ShopWorkflowTest {
         // buy 1st Dress
         // Go to Summer Dresses section
         buyDress(clothes.getDressesBtn(), clothes.getSummerDressesBtn(), 3, 1);
- /*       action.moveToElement(clothes.getSummerDressesBtn()).perform();
-        clothes.getSummerDressesBtn().click();
-
-        while (i <= clothes.getDressesCount().size()) {Assert.assertTrue(clothes.getDressProduct(i).isDisplayed()); i += 1;}
-        Assert.assertEquals(clothes.getDressesCount().size(), 3);
-
-        // Add 1st Dress from Summer Dresses to cart
-
-        action.moveToElement(clothes.getDressProduct(1)).perform();
-        action.moveToElement(shoppingActions.getAddToCartBtn()).perform();
-
-        Assert.assertTrue(shoppingActions.getAddToCartBtn().isDisplayed());
-
-        action.click(shoppingActions.getAddToCartBtn()).build().perform();
-        // Click Continue shopping button
-        action.click(shoppingActions.getContinueShopingBtn()).build().perform();
-
-        Assert.assertTrue(shoppingActions.getContinueShopingBtn().isDisplayed());*/
-
-        // Assert that 1st Dress is in the cart
-/*        action.moveToElement(cart.getCartTab()).perform();
-
-        Assert.assertEquals(cart.getCartProductsQty().size(), 1);*/
-
-        // Add 2nd dress to cart
+        // buy 2nd Dress
         buyDress(clothes.getDressesBtn(), clothes.getCasualDressesBtn(), 1, 2);
-/*        action.moveToElement(clothes.getDressesBtn()).perform();
-
-        Assert.assertTrue(clothes.getCasualDressesBtn().isDisplayed());
-
-        action.moveToElement(clothes.getCasualDressesBtn()).perform();
-        clothes.getCasualDressesBtn().click();
-        action.moveToElement(clothes.getCasualDressProduct(1)).perform();
-        action.moveToElement(shoppingActions.getAddToCartBtn()).perform();
-        action.click(shoppingActions.getAddToCartBtn()).build().perform();
-
-        Assert.assertTrue(shoppingActions.getAddToCartBtn().isDisplayed());
-
-        action.click(shoppingActions.getContinueShopingBtn()).build().perform();
-        action.moveToElement(cart.getCartTab()).perform();
-
-        Assert.assertEquals(cart.getCartProductsQty().size(), 2);*/
-
-        // Add 3rd dress to cart
+        // buy 3rd Dress
         buyDress(clothes.getDressesBtn(), clothes.getEveningDressesBtn(), 1, 3);
 
-/*        action.moveToElement(clothes.getDressesBtn()).perform();
-
-        Assert.assertTrue(clothes.getEveningDressesBtn().isDisplayed());
-
-        action.moveToElement(clothes.getEveningDressesBtn()).perform();
-        clothes.getEveningDressesBtn().click();
-        action.moveToElement(clothes.getDressProduct(1)).perform();
-        action.moveToElement(shoppingActions.getAddToCartBtn()).perform();
-        action.click(shoppingActions.getAddToCartBtn()).build().perform();
-
-        Assert.assertTrue(shoppingActions.getAddToCartBtn().isDisplayed());
-
-        action.click(shoppingActions.getContinueShopingBtn()).build().perform();
-        action.moveToElement(cart.getCartTab()).perform();
-        // Assert that 3 products are in the cart
-        Assert.assertEquals(cart.getCartProductsQty().size(), 3);*/
     }
 
     private void buyDress(WebElement dressMenu, WebElement dressProduct, int index, int numOfProductsInCart) {
