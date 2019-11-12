@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8250031-a3e3-4737-8438-c0a48aa1c942" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/CucumberFramework/featureFiles/Login.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CucumberFramework/steps/Login.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CucumberFramework/steps/LoginSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestRunner/TestRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/automationpractice/com/pageObject/Clothes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/automationpractice/com/pageObject/Clothes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/automationpractice/com/ShopWorkflowTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/automationpractice/com/ShopWorkflowTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +52,16 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/CucumberFramework/steps" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4597701" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\MiniAfFramework\src\test\java\CucumberFramework\steps" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -65,7 +75,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ShopWorkflowTest">
+  <component name="RunManager" selected="JUnit.TestRunner">
+    <configuration name="TestRunner" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="automationpractice.com" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestRunner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestRunner" />
+      <option name="MAIN_CLASS_NAME" value="TestRunner.TestRunner" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="D:/Projects/MiniAfFramework/NegativeTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="automationpractice.com" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/NegativeTests.xml" />
@@ -80,23 +107,6 @@
       <module name="automationpractice.com" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PositiveTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="automationpractice.com" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.herokuapp.theinternet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.herokuapp.theinternet" />
-      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.PositiveTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -139,13 +149,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Login.feature" type="substepsFeature" factoryName="Substeps Feature" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="model">
+        <SubstepsRunnerConfigurationModel>
+          <option name="classPathString" />
+          <option name="homePath" />
+          <option name="modulePath" value="$PROJECT_DIR$/automationpractice.com.iml" />
+          <option name="myListener" />
+          <option name="nonStrictKeywordPrecedence" />
+          <option name="pathToFeature" value="$PROJECT_DIR$/src/test/java/CucumberFramework/featureFiles/Login.feature" />
+          <option name="scenarioName" />
+          <option name="stepImplentationClassNames">
+            <array />
+          </option>
+          <option name="strict" value="false" />
+          <option name="subStepDefinitionDirectory" />
+          <option name="tags" />
+          <option name="versionString" />
+          <option name="workingDir" value="$PROJECT_DIR$" />
+        </SubstepsRunnerConfigurationModel>
+      </option>
+      <option name="classPathString" />
+      <option name="homePath" />
+      <option name="modulePath" value="$PROJECT_DIR$/automationpractice.com.iml" />
+      <option name="myListener" />
+      <option name="nonStrictKeywordPrecedence" />
+      <option name="pathToFeature" value="$PROJECT_DIR$/src/test/java/CucumberFramework/featureFiles/Login.feature" />
+      <option name="scenarioName" />
+      <option name="stepImplentationClassNames">
+        <array />
+      </option>
+      <option name="strict" value="false" />
+      <option name="subStepDefinitionDirectory" />
+      <option name="tags" />
+      <option name="versionString" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.ShopWorkflowTest" />
         <item itemvalue="TestNG.ShopWorkflowTest.selectClothes" />
         <item itemvalue="TestNG.D:/Projects/MiniAfFramework/NegativeTests.xml" />
         <item itemvalue="TestNG.D:/Projects/MiniAfFramework/testng.xml" />
-        <item itemvalue="TestNG.PositiveTests" />
       </list>
     </recent_temporary>
   </component>
