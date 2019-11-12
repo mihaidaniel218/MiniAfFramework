@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="com.herokuapp.theinternet">
+
+	<test name="com.herokuapp.theinternet" parallel="false" preserve-order="true">
+        <groups>
+            <run>
+                <include name="smoketests"/>
+            </run>
+        </groups>
+
+        <classes>
+        <class name="com.herokuapp.theinternet.PositiveTests">
+<!--            <methods>
+                <include name="loginTest" />
+            </methods>-->
+        </class>
+        <class name="com.herokuapp.theinternet.NegativeTests">
+<!--            <methods>
+                <include name="loginNUTest" />
+                <include name="loginNPTest" />
+            </methods>-->
+        </class>
+   </classes>
+</test>
+</suite>

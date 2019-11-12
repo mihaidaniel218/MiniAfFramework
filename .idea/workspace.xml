@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e8250031-a3e3-4737-8438-c0a48aa1c942" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1TElzkxlujHsewKpMPLyeYpSpGR" />
+  <component name="PropertiesComponent">
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="TestNG.ShopWorkflowTest">
+    <configuration name="D:/Projects/MiniAfFramework/NegativeTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="automationpractice.com" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/NegativeTests.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/Projects/MiniAfFramework/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="automationpractice.com" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PositiveTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="automationpractice.com" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.herokuapp.theinternet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.herokuapp.theinternet" />
+      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.PositiveTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopWorkflowTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="automationpractice.com" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="automationpractice.com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="automationpractice.com" />
+      <option name="MAIN_CLASS_NAME" value="automationpractice.com.ShopWorkflowTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopWorkflowTest.selectClothes" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="automationpractice.com" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="automationpractice.com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="automationpractice.com" />
+      <option name="MAIN_CLASS_NAME" value="automationpractice.com.ShopWorkflowTest" />
+      <option name="METHOD_NAME" value="selectClothes" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="0" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.ShopWorkflowTest" />
+        <item itemvalue="TestNG.ShopWorkflowTest.selectClothes" />
+        <item itemvalue="TestNG.D:/Projects/MiniAfFramework/NegativeTests.xml" />
+        <item itemvalue="TestNG.D:/Projects/MiniAfFramework/testng.xml" />
+        <item itemvalue="TestNG.PositiveTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e8250031-a3e3-4737-8438-c0a48aa1c942" name="Default Changelist" comment="" />
+      <created>1573033399099</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573033399099</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/Cart.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
