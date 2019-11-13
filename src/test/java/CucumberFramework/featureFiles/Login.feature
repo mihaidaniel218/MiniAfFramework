@@ -1,5 +1,6 @@
-Feature: Login into account
+Feature: Login into account and check UI of site
       Existing user should be able to login into account using correct credentials
+      UI interface is corresponding to the client and business analysts requirements
 
  Scenario: Log into account with correct credentials
     Given User Navigates to StackOverflow website
