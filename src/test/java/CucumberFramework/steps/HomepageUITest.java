@@ -1,7 +1,6 @@
 package CucumberFramework.steps;
 
-import automationpractice.com.pageObject.Clothes;
-import automationpractice.com.pageObject.Homepage;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -85,7 +84,55 @@ public class HomepageUITest {
 
 
     @And("^Attach file modal is displayed$")
-    public void attachFileModalIsDisplayed() {
+    public void attachFileModalIsDisplayed() throws InterruptedException {
+        Thread.sleep(500);
         System.out.println("Attach file modal is displayed");
+        Thread.sleep(500);
+        driver.close();
+    }
+
+    @When("^User hovers over the Women button tab$")
+    public void userHoversOverTheWomenButtonTab() {
+        System.out.println("User Hovers over the Women Button tab");
+    }
+
+    @Then("^tooltip \"([^\"]*)\" is displayed$")
+    public void tooltipIsDisplayed(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        System.out.println("Tooltip" + arg0 + "is displayed");
+      //throw new PendingException();
+    }
+
+    @And("^Tops and Dresses sub-menus show up$")
+    public void topsAndDressesSubMenusShowUp() {
+        System.out.println("Tops and Dresses sub-menus show up");
+    }
+
+    @And("^Tops submenu has two entries$")
+    public void topsSubmenuHasTwoEntries() {
+        System.out.println("^Tops submenu has two entries$");
+    }
+
+    @And("^Dresses submenu has three entries$")
+    public void dressesSubmenuHasThreeEntries() throws InterruptedException {
+        System.out.println("^Dresses submenu has three entries$");
+    }
+
+    @When("^user hovers over the Dresses button tab$")
+    public void userHoversOverTheDressesButtonTab() {
+        System.out.println("User hovers over the Dresses button tab");
+    }
+
+    @And("^Casual Evening and Summer Dresses submenus are displayed$")
+    public void casualEveningAndSummerDressesSubmenusAreDisplayed() throws InterruptedException {
+        System.out.println("Casual Evening and Summer Dresses submenus are displayed");
+
+    }
+
+    @When("^user hovers over the T-shirts button tab$")
+    public void userHoversOverTheTShirtsButtonTab() throws InterruptedException {
+        System.out.println("user hovers over the T-shirts button tab");
+        Thread.sleep(2000);
+        driver.quit();
     }
 }
