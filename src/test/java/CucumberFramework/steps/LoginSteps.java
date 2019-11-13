@@ -43,10 +43,10 @@ public class LoginSteps {
         //throw new PendingException();
     }
 
-    @Then("^User should be taken to the succesfull login page$")
-    public void user_should_be_taken_to_the_succesfull_login_page() throws Throwable {
+    @Then("^User should be taken to the successful login page$")
+    public void user_should_be_taken_to_the_successful_login_page() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        System.out.println("User should be taken to the succesfull login page");
+        System.out.println("User should be taken to the successful login page");
         //throw new PendingException();
     }
 

@@ -7,4 +7,4 @@ Feature: Login into account
     And User enters a valid username
     And User enters a valid password
     When User clicks on the login button
-    Then User should be taken to the succesfull login page
+    Then User should be taken to the successful login page
