@@ -51,9 +51,9 @@ public class HomepageUITest {
 
     @And("^Contact phone number is correct$")
     public void contactPhoneNumberIsCorrect() {
-        String expectedPhone = "0123-456-789";
-        String actualPhone = contactPhone().getText();
-        Assert.assertEquals(expectedPhone, actualPhone, "Expected Url is not the same with Actual URL");
+        String expectedPhoneNo = "0123-456-789";
+        String actualPhoneNo = contactPhone().getText();
+        Assert.assertEquals(expectedPhoneNo, actualPhoneNo, "Expected Url is not the same with Actual URL");
         System.out.println("Contact Phone Number is correct");
     }
 

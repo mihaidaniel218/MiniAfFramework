@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions
         (
-                features={"d:\\Projects\\MiniAfFramework\\src\\test\\java\\CucumberFramework\\steps\\Login.feature"},
+                features={"d:\\Projects\\MiniAfFramework\\src\\test\\java\\CucumberFramework\\featureFiles\\Login.feature"},
                 glue={"CucumberFramework.steps"},
                 monochrome = true,
                 tags = {}
