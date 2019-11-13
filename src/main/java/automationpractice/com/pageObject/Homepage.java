@@ -28,5 +28,10 @@ public class Homepage {
 	
 	public WebElement getFooterBanners() {
 		return utils.Utils.waitForElementPresence(driver, By.id("htmlcontent_home"), 30);
-	}	
+	}
+
+	public WebElement contactPhone() {
+		return utils.Utils.waitForElementPresence(driver, By.xpath("//strong[contains(text(),'0123-456-789')]"), 30);
+	}
+
 }

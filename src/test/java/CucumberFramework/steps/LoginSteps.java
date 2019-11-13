@@ -5,13 +5,30 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+import java.util.concurrent.TimeUnit;
 
 public class LoginSteps {
 
+    private WebDriver driver;
+
+
     @Given("^User Navigates to StackOverflow website$")
     public void user_Navigates_to_StackOverflow_website() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        System.out.println("User Navigates to StackOverflow website");
+        // Write code here that turns the phrase above into concrete action
+        System.out.println("User Navigates to AutomationPractice website");
+/*        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+        String baseUrl = "http://automationpractice.com/index.php";
+        driver.manage().window().maximize();
+        driver.get(baseUrl);
+        String expectedTitle = "My Store";
+        String title = driver.getTitle();
+        Assert.assertEquals(title, expectedTitle, "Expected Url is not the same with Actual URL");*/
         //throw new PendingException();
     }
 
