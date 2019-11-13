@@ -135,4 +135,19 @@ public class HomepageUITest {
         Thread.sleep(2000);
         driver.quit();
     }
+
+    @And("^font size for Women submenu is (\\d+) by (\\d+) or (\\d+) px$")
+    public void fontSizeForWomenSubmenuIsByOrPx(int arg0, int arg1, int arg2) {
+        System.out.println("^font size for Women submenu is " + arg0 + " " + arg1 + " " + arg2);
+    }
+
+    @And("^font size for Dresses submenu is (\\d+) by (\\d+) or (\\d+) px$")
+    public void fontSizeForDressesSubmenuIsByOrPx(int arg0, int arg1, int arg2) {
+        System.out.println("^font size for Dresses submenu is " + arg0 + " " + arg1 + " " + arg2);
+    }
+
+    @And("^font size for T-shirts submenu is (\\d+) by (\\d+) or (\\d+) px$")
+    public void fontSizeForTShirtsSubmenuIsByOrPx(int arg0, int arg1, int arg2) {
+        System.out.println("^font size for T-shirts submenu is " + arg0 + " " + arg1 + " " + arg2);
+    }
 }

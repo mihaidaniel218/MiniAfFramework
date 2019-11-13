@@ -26,11 +26,14 @@ Feature: Login into account and check UI of site
     Given User Navigates to Automationpractice HomePage
     When User hovers over the Women button tab
     Then tooltip "women" is displayed
+    And font size for Women submenu is 600 by 18 or 22 px
     And Tops and Dresses sub-menus show up
     And Tops submenu has two entries
     And Dresses submenu has three entries
     When user hovers over the Dresses button tab
     Then tooltip "dresses" is displayed
+    And font size for Dresses submenu is 600 by 18 or 22 px
     And Casual Evening and Summer Dresses submenus are displayed
     When user hovers over the T-shirts button tab
     Then tooltip "t-shirts" is displayed
+    And font size for T-shirts submenu is 600 by 18 or 22 px
