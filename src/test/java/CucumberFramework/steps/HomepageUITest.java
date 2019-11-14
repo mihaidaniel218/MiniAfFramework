@@ -99,7 +99,7 @@ public class HomepageUITest {
     @Then("^tooltip \"([^\"]*)\" is displayed$")
     public void tooltipIsDisplayed(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        System.out.println("Tooltip" + arg0 + "is displayed");
+        System.out.println("Tooltip " + arg0 + " is displayed");
       //throw new PendingException();
     }
 
@@ -115,7 +115,7 @@ public class HomepageUITest {
 
     @And("^Dresses submenu has three entries$")
     public void dressesSubmenuHasThreeEntries() throws InterruptedException {
-        System.out.println("^Dresses submenu has three entries$");
+        System.out.println("Dresses submenu has three entries");
     }
 
     @When("^user hovers over the Dresses button tab$")
@@ -131,14 +131,14 @@ public class HomepageUITest {
 
     @When("^user hovers over the T-shirts button tab$")
     public void userHoversOverTheTShirtsButtonTab() throws InterruptedException {
-        System.out.println("user hovers over the T-shirts button tab");
+        System.out.println("User hovers over the T-shirts button tab");
         Thread.sleep(2000);
         driver.quit();
     }
 
     @And("^font size for Women submenu is (\\d+) by (\\d+) or (\\d+) px$")
     public void fontSizeForWomenSubmenuIsByOrPx(int arg0, int arg1, int arg2) {
-        System.out.println("^font size for Women submenu is " + arg0 + " " + arg1 + " " + arg2);
+        System.out.println("Font size for Women submenu is " + arg0 + " " + arg1 + " " + arg2);
     }
 
     @And("^font size for Dresses submenu is (\\d+) by (\\d+) or (\\d+) px$")
