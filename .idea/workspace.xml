@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e8250031-a3e3-4737-8438-c0a48aa1c942" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CucumberFramework/steps/HomepageUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberFramework/steps/HomepageUITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/Homepage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/automationpractice/com/ShopWorkflowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/automationpractice/com/ShopWorkflowTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573636939677</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updated feature steps">
+      <created>1573726663876</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573726663876</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +246,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cleared more commented code" />
     <MESSAGE value="Corrected feature steps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected feature steps" />
+    <MESSAGE value="Updated feature steps" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated feature steps" />
   </component>
 </project>

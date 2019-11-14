@@ -15,6 +15,7 @@ import automationpractice.com.pageObject.CartSummary;
 import automationpractice.com.pageObject.Clothes;
 import automationpractice.com.pageObject.ShoppingActions;
 import automationpractice.com.pageObject.SignInForm;
+import automationpractice.com.pageObject.Homepage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -29,6 +30,7 @@ public class ShopWorkflowTest {
     private CartSummary summary;
     private SignInForm signinForm;
     private Account account;
+    private Homepage homepage;
 
     @BeforeClass
     public void setup() {
@@ -75,6 +77,26 @@ public class ShopWorkflowTest {
         buyDress(clothes.getDressesBtn(), clothes.getCasualDressesBtn(), 1, 2);
         // buy 3rd Dress
         buyDress(clothes.getDressesBtn(), clothes.getEveningDressesBtn(), 1, 3);
+
+    }
+
+    @Test(priority = 2)
+    public void searchClothes() {
+        int i = 1;
+        // Assert dresses buttons are shown
+        Assert.assertTrue(homepage.searchQuery().isDisplayed());
+
+        action.moveToElement(homepage.searchQuery()).perform();
+
+        action.click(homepage.searchQuery()).build().perform();
+
+        homepage.searchQuery().sendKeys("dresses");
+
+        action.click(homepage.submitSearch()).build().perform();
+
+        Assert.assertTrue(homepage.headingCounter().isDisplayed());
+        String headCount = homepage.headingCounter().getText().substring(0, 1);
+        Assert.assertEquals(headCount, 7, "Number of actual products not same with expected one!");
 
     }
 

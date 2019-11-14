@@ -34,4 +34,17 @@ public class Homepage {
 		return utils.Utils.waitForElementPresence(driver, By.xpath("//strong[contains(text(),'0123-456-789')]"), 30);
 	}
 
+	public WebElement searchQuery() {
+		return utils.Utils.waitForElementPresence(driver, By.xpath("//input[@id='search_query_top']"), 30);
+	}
+
+	public WebElement submitSearch() {
+		return utils.Utils.waitForElementPresence(driver, By.xpath("//button[@name='submit_search']"), 30);
+	}
+
+	public WebElement headingCounter() {
+		return utils.Utils.waitForElementPresence(driver, By.xpath("//span[@class='heading-counter']"), 30);
+	}
+
+
 }
