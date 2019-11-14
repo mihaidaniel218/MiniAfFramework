@@ -1,6 +1,5 @@
 package CucumberFramework.steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -9,6 +8,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import automationpractice.com.pageObject.Account;
+import automationpractice.com.pageObject.Cart;
+import automationpractice.com.pageObject.CartSummary;
+import automationpractice.com.pageObject.Clothes;
+import automationpractice.com.pageObject.ShoppingActions;
+import automationpractice.com.pageObject.SignInForm;
+import automationpractice.com.pageObject.Homepage;
 import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
@@ -16,10 +23,55 @@ import java.util.concurrent.TimeUnit;
 public class HomepageUITest {
 
     private WebDriver driver;
+    private automationpractice.com.pageObject.Homepage homepage;
+    private Actions action;
+    private automationpractice.com.pageObject.Clothes clothes;
+    private automationpractice.com.pageObject.Cart cart;
+    private automationpractice.com.pageObject.ShoppingActions shoppingActions;
+    private automationpractice.com.pageObject.CartSummary summary;
+    private automationpractice.com.pageObject.SignInForm signinForm;
+    private automationpractice.com.pageObject.Account account;
 
+    public void setup() {
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+        action = new Actions(driver);
+
+        clothes = new Clothes(driver);
+        homepage = new Homepage(driver);
+        cart = new Cart(driver);
+        shoppingActions = new ShoppingActions(driver);
+        signinForm = new SignInForm(driver);
+        summary = new CartSummary(driver);
+        account = new Account(driver);
+
+        String baseUrl = "http://automationpractice.com/index.php";
+        driver.manage().window().maximize();
+        driver.get(baseUrl);
+    }
     public WebElement contactPhone() {
         return utils.Utils.waitForElementPresence(driver, By.xpath("//strong[contains(text(),'0123-456-789')]"), 30);
     }
+
+/*    public void searchClothes() {
+        // Assert dresses buttons are shown
+        Assert.assertTrue(homepage.searchQuery().isDisplayed());
+
+        action.moveToElement(homepage.searchQuery()).perform();
+
+        action.click(homepage.searchQuery()).build().perform();
+
+        homepage.searchQuery().sendKeys("dresses");
+
+        action.click(homepage.submitSearch()).build().perform();
+
+        Assert.assertTrue(homepage.headingCounter().isDisplayed());
+        String headCount = (homepage.headingCounter().getText().substring(0, 1));
+        String dressesCount = String.valueOf((clothes.getDressesCount().size()));
+        Assert.assertEquals(headCount, dressesCount, "Number of actual products is not the same with search results one!");
+    }*/
 
     @Given("^User Navigates to Automationpractice HomePage$")
     public void userNavigatesToAutomationpracticeHomePage() {
@@ -30,9 +82,6 @@ public class HomepageUITest {
         String baseUrl = "http://automationpractice.com/index.php";
         driver.manage().window().maximize();
         driver.get(baseUrl);
-/*        String expectedTitle = "My Store";
-        String title = driver.getTitle();
-        Assert.assertEquals(title, expectedTitle, "Expected Url is not the same with Actual URL");*/
     }
 
     @Then("^MyStore logo is displayed$")
@@ -150,4 +199,42 @@ public class HomepageUITest {
     public void fontSizeForTShirtsSubmenuIsByOrPx(int arg0, int arg1, int arg2) {
         System.out.println("^font size for T-shirts submenu is " + arg0 + " " + arg1 + " " + arg2);
     }
+
+    @When("^User inputs Dresses in Search box and clicks the submit search button$")
+    public void userInputsDressesInSearchBoxAndClicksTheSubmitSearchButton() {
+        setup();
+        Assert.assertTrue(homepage.searchQuery().isDisplayed());
+        action.moveToElement(homepage.searchQuery()).perform();
+        action.click(homepage.searchQuery()).build().perform();
+        homepage.searchQuery().sendKeys("dresses");
+        action.click(homepage.submitSearch()).build().perform();
+        System.out.println("User inputs Dresses in Search box and clicks the submit search button");
+    }
+
+    @Then("seven dresses products are displayed$")
+    public void sevenDressesProductsAreDisplayed() {
+        String dressesCount = String.valueOf((clothes.getDressesCount().size()));
+        System.out.println(dressesCount + " dresses products are displayed");
+    }
+
+    @And("^\"([^\"]*)\" is displayed in the heading counter area$")
+    public void isDisplayedInTheHeadingCounterArea(String arg0) throws Throwable {
+        Assert.assertTrue(homepage.headingCounter().isDisplayed());
+        Assert.assertEquals(homepage.headingCounter().getText().substring(0, 1), "7");
+        String dressesCount = String.valueOf((clothes.getDressesCount().size()));
+        System.out.println("\"7 results have been found\" is displayed in the heading counter area");
+        // Write code here that turns the phrase above into concrete actions
+        /*throw new PendingException();*/
+    }
+
+    @And("^the number of products from the list and the one displayed in the heading counter area is the same$")
+    public void theNumberOfProductsFromTheListAndTheOneDisplayedInTheHeadingCounterAreaIsTheSame() throws InterruptedException {
+        String headCount = (homepage.headingCounter().getText().substring(0, 1));
+        String dressesCount = String.valueOf((clothes.getDressesCount().size()));
+        Assert.assertEquals(headCount, dressesCount, "Number of actual products is not the same with search results one!");
+        System.out.println("the number of products from the list and the one displayed in the heading counter area is the same");
+        Thread.sleep(2000);
+        driver.quit();
+    }
+
 }

@@ -37,3 +37,10 @@ Feature: Login into account and check UI of site
     When user hovers over the T-shirts button tab
     Then tooltip "t-shirts" is displayed
     And font size for T-shirts submenu is 600 by 18 or 22 px
+
+  Scenario: Search for different products and confirm search is correct
+    Given User Navigates to Automationpractice HomePage
+    When User inputs Dresses in Search box and clicks the submit search button
+    Then seven dresses products are displayed
+    And "7 results have been found" is displayed in the heading counter area
+    And the number of products from the list and the one displayed in the heading counter area is the same

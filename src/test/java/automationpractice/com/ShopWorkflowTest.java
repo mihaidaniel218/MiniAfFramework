@@ -61,7 +61,6 @@ public class ShopWorkflowTest {
 
     @Test(priority = 1)
     public void searchClothes() {
-        int i = 1;
         // Assert dresses buttons are shown
         Assert.assertTrue(homepage.searchQuery().isDisplayed());
 
