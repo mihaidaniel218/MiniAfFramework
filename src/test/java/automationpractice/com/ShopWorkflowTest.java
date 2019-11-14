@@ -59,7 +59,28 @@ public class ShopWorkflowTest {
         driver.quit();
     }
 
-/*    @Test(priority = 1)
+    @Test(priority = 1)
+    public void searchClothes() {
+        int i = 1;
+        // Assert dresses buttons are shown
+        Assert.assertTrue(homepage.searchQuery().isDisplayed());
+
+        action.moveToElement(homepage.searchQuery()).perform();
+
+        action.click(homepage.searchQuery()).build().perform();
+
+        homepage.searchQuery().sendKeys("dresses");
+
+        action.click(homepage.submitSearch()).build().perform();
+
+        Assert.assertTrue(homepage.headingCounter().isDisplayed());
+        String headCount = (homepage.headingCounter().getText().substring(0, 1));
+        String dressesCount = String.valueOf((clothes.getDressesCount().size()));
+        Assert.assertEquals(headCount, dressesCount, "Number of actual products is not the same with search results one!");
+    }
+
+
+    @Test(priority = 2)
     public void selectClothes() {
         int i = 1;
         // Assert dresses buttons are shown
@@ -78,28 +99,8 @@ public class ShopWorkflowTest {
         buyDress(clothes.getDressesBtn(), clothes.getCasualDressesBtn(), 1, 2);
         // buy 3rd Dress
         buyDress(clothes.getDressesBtn(), clothes.getEveningDressesBtn(), 1, 3);
-
-    }*/
-
-    @Test(priority = 1)
-    public void searchClothes() {
-        int i = 1;
-        // Assert dresses buttons are shown
-        Assert.assertTrue(homepage.searchQuery().isDisplayed());
-
-        action.moveToElement(homepage.searchQuery()).perform();
-
-        action.click(homepage.searchQuery()).build().perform();
-
-        homepage.searchQuery().sendKeys("dresses");
-
-        action.click(homepage.submitSearch()).build().perform();
-
-        Assert.assertTrue(homepage.headingCounter().isDisplayed());
-        String headCount = homepage.headingCounter().getText().substring(0, 1);
-        Assert.assertEquals(headCount, "7", "Number of actual products not same with expected one!");
-
     }
+
 
     private void buyDress(WebElement dressMenu, WebElement dressProduct, int index, int numOfProductsInCart) {
         int i = 1;
