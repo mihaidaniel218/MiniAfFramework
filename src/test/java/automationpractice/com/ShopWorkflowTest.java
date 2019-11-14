@@ -41,6 +41,7 @@ public class ShopWorkflowTest {
         action = new Actions(driver);
 
         clothes = new Clothes(driver);
+        homepage = new Homepage(driver);
         cart = new Cart(driver);
         shoppingActions = new ShoppingActions(driver);
         signinForm = new SignInForm(driver);
@@ -58,7 +59,7 @@ public class ShopWorkflowTest {
         driver.quit();
     }
 
-    @Test(priority = 1)
+/*    @Test(priority = 1)
     public void selectClothes() {
         int i = 1;
         // Assert dresses buttons are shown
@@ -78,9 +79,9 @@ public class ShopWorkflowTest {
         // buy 3rd Dress
         buyDress(clothes.getDressesBtn(), clothes.getEveningDressesBtn(), 1, 3);
 
-    }
+    }*/
 
-    @Test(priority = 2)
+    @Test(priority = 1)
     public void searchClothes() {
         int i = 1;
         // Assert dresses buttons are shown
@@ -96,7 +97,7 @@ public class ShopWorkflowTest {
 
         Assert.assertTrue(homepage.headingCounter().isDisplayed());
         String headCount = homepage.headingCounter().getText().substring(0, 1);
-        Assert.assertEquals(headCount, 7, "Number of actual products not same with expected one!");
+        Assert.assertEquals(headCount, "7", "Number of actual products not same with expected one!");
 
     }
 
