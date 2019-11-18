@@ -20,6 +20,9 @@ import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 public class HomepageUITest {
 
     private WebDriver driver;
@@ -55,6 +58,26 @@ public class HomepageUITest {
         return utils.Utils.waitForElementPresence(driver, By.xpath("//strong[contains(text(),'0123-456-789')]"), 30);
     }
 
+    public WebElement homepageBanner() {
+        return utils.Utils.waitForElementPresence(driver, By.xpath("//div[@class='banner']//img[@class='img-responsive']"), 30);
+    }
+
+    public WebElement homepageLogo() {
+        return utils.Utils.waitForElementPresence(driver, By.xpath("//img[@class='logo img-responsive']"), 30);
+    }
+
+    public WebElement homepageAdvertOne() {
+        return utils.Utils.waitForElementPresence(driver, By.xpath("//div[@id='htmlcontent_top']//li[@class='htmlcontent-item-1 col-xs-4']//img[@class='item-img']"), 30);
+    }
+
+    public WebElement homepageAdvertTwo() {
+        return utils.Utils.waitForElementPresence(driver, By.xpath("//div[@id='htmlcontent_top']//li[@class='htmlcontent-item-2 col-xs-4']//img[@class='item-img']"), 30);
+    }
+
+    public WebElement homepageSliderOne() {
+        return utils.Utils.waitForElementPresence(driver, By.xpath("//div[@id='slider_row']//li[4]//a[1]//img[1]"), 30);
+    }
+
 /*    public void searchClothes() {
         // Assert dresses buttons are shown
         Assert.assertTrue(homepage.searchQuery().isDisplayed());
@@ -76,25 +99,61 @@ public class HomepageUITest {
     @Given("^User Navigates to Automationpractice HomePage$")
     public void userNavigatesToAutomationpracticeHomePage() {
         System.out.println("User Navigates to Automationpractice HomePage");
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+        setup();
+/*        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         String baseUrl = "http://automationpractice.com/index.php";
         driver.manage().window().maximize();
-        driver.get(baseUrl);
+        driver.get(baseUrl);*/
     }
 
-    @Then("^MyStore logo is displayed$")
+    @Then("^MyStore logo is displayed with 350 width and 99 height$")
     public void mystoreLogoIsDisplayed() {
         String expectedTitle = "My Store";
         String title = driver.getTitle();
         Assert.assertEquals(title, expectedTitle, "Expected Url is not the same with Actual URL");
+        String logoWidth = homepageLogo().getAttribute("width");
+        String logoHeight = homepageLogo().getAttribute("height");
+        assertEquals(logoWidth, "350", "Store Banner does not have the expected width!");
+        assertEquals(logoHeight, "99", "Store Banner does not have the expected height!");
         System.out.println("MyStore logo is displayed");
     }
 
-    @And("^Blockbanner offer is displayed$")
+    @And("^Blockbanner offer is displayed with 1170 height and 65 height$")
     public void blockbannerOfferIsDisplayed() {
+        String bannerWidth = homepageBanner().getAttribute("width");
+        String bannerHeight = homepageBanner().getAttribute("height");
+        assertEquals(bannerWidth, "1170", "Store logo does not have the expected width!");
+        assertEquals(bannerHeight, "65", "Banner does not have the expected height!");
         System.out.println("Blockbanner offer is displayed");
+    }
+
+    @And("^Advert One offer is displayed with (\\d+) width by (\\d+) height$")
+    public void advertOneOfferIsDisplayedWithWidthByHeight(int arg0, int arg1) {
+        String homepageAdvOneWidth =  homepageAdvertOne().getAttribute("width");
+        String homepageAdvOneHeight = homepageAdvertOne().getAttribute("height");
+        Assert.assertEquals(homepageAdvOneWidth, "381", "Expected Advert One width is not the same with actual Advert One width");
+        Assert.assertEquals(homepageAdvOneHeight, "219", "Expected Advert One width is not the same with actual Advert One width");
+        System.out.println("Advert One offer is displayed with 381 width by 219 height");
+    }
+
+    @And("^Advert Two offer is displayed with (\\d+) width by (\\d+) height$")
+    public void advertTwoOfferIsDisplayedWithWidthByHeight(int arg0, int arg1) {
+        String homepageAdvTwoWidth =  homepageAdvertTwo().getAttribute("width");
+        String homepageAdvTwoHeight = homepageAdvertTwo().getAttribute("height");
+        Assert.assertEquals(homepageAdvTwoWidth, "381", "Expected Advert Two width is not the same with actual Advert One width");
+        Assert.assertEquals(homepageAdvTwoHeight, "219", "Expected Advert Two width is not the same with actual Advert One width");
+        System.out.println("Advert Two offer is displayed with 381 width by 219 height");
+    }
+
+    @And("^Advert Slider is displayed width (\\d+) width by (\\d+) height$")
+    public void advertSliderIsDisplayedWidthWidthByHeight(int arg0, int arg1) {
+        String homepageSliderWidth =  homepageSliderOne().getAttribute("width");
+        String homepageAdvTwoHeight = homepageSliderOne().getAttribute("height");
+        Assert.assertEquals(homepageSliderWidth, "779", "Expected Advert Slider width is not the same with actual Advert One width");
+        Assert.assertEquals(homepageAdvTwoHeight, "448", "Expected Advert Slider width is not the same with actual Advert One width");
+        System.out.println("Advert Slider offer is displayed with 779 width by 448 height");
     }
 
     @And("^Contact phone number is correct$")
@@ -202,8 +261,8 @@ public class HomepageUITest {
 
     @When("^User inputs Dresses in Search box and clicks the submit search button$")
     public void userInputsDressesInSearchBoxAndClicksTheSubmitSearchButton() {
-        setup();
-        Assert.assertTrue(homepage.searchQuery().isDisplayed());
+        //setup();
+        assertTrue(homepage.searchQuery().isDisplayed());
         action.moveToElement(homepage.searchQuery()).perform();
         action.click(homepage.searchQuery()).build().perform();
         homepage.searchQuery().sendKeys("dresses");
@@ -211,7 +270,7 @@ public class HomepageUITest {
         System.out.println("User inputs Dresses in Search box and clicks the submit search button");
     }
 
-    @Then("seven dresses products are displayed$")
+    @Then("A number of dresses products are displayed$")
     public void sevenDressesProductsAreDisplayed() {
         String dressesCount = String.valueOf((clothes.getDressesCount().size()));
         System.out.println(dressesCount + " dresses products are displayed");
@@ -219,7 +278,7 @@ public class HomepageUITest {
 
     @And("^\"([^\"]*)\" is displayed in the heading counter area$")
     public void isDisplayedInTheHeadingCounterArea(String arg0) throws Throwable {
-        Assert.assertTrue(homepage.headingCounter().isDisplayed());
+        assertTrue(homepage.headingCounter().isDisplayed());
         Assert.assertEquals(homepage.headingCounter().getText().substring(0, 1), "7");
         String dressesCount = String.valueOf((clothes.getDressesCount().size()));
         System.out.println("\"7 results have been found\" is displayed in the heading counter area");
@@ -232,7 +291,7 @@ public class HomepageUITest {
         String headCount = (homepage.headingCounter().getText().substring(0, 1));
         String dressesCount = String.valueOf((clothes.getDressesCount().size()));
         Assert.assertEquals(headCount, dressesCount, "Number of actual products is not the same with search results one!");
-        System.out.println("the number of products from the list and the one displayed in the heading counter area is the same");
+        System.out.println("The number of products from the list and the one displayed in the heading counter area is the same");
         Thread.sleep(2000);
         driver.quit();
     }

@@ -12,8 +12,11 @@ Feature: Login into account and check UI of site
 
   Scenario: Check store logo blockbanner and contact details
     Given User Navigates to Automationpractice HomePage
-    Then MyStore logo is displayed
-    And Blockbanner offer is displayed
+    Then MyStore logo is displayed with 350 width and 99 height
+    And Blockbanner offer is displayed with 1170 height and 65 height
+    And Advert One offer is displayed with 381 width by 219 height
+    And Advert Two offer is displayed with 381 width by 219 height
+    And Advert Slider is displayed width 779 width by 448 height
     And Contact phone number is correct
     When User clicks on the Contact us link
     Then Customer service modal is displayed
@@ -41,6 +44,6 @@ Feature: Login into account and check UI of site
   Scenario: Search for different products and confirm search is correct
     Given User Navigates to Automationpractice HomePage
     When User inputs Dresses in Search box and clicks the submit search button
-    Then seven dresses products are displayed
-    And "7 results have been found" is displayed in the heading counter area
+    Then A number of dresses products are displayed
+    And "n results have been found" is displayed in the heading counter area
     And the number of products from the list and the one displayed in the heading counter area is the same

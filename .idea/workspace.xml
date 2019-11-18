@@ -5,9 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CucumberFramework/featureFiles/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberFramework/featureFiles/Login.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CucumberFramework/steps/HomepageUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberFramework/steps/HomepageUITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/automationpractice/com/ShopWorkflowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/automationpractice/com/ShopWorkflowTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CucumberFramework/steps/HomepageUITest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CucumberFramework/steps/HomepageUITest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/automationpractice/com/ShopWorkflowTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/automationpractice/com/ShopWorkflowTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
