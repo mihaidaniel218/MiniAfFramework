@@ -19,7 +19,7 @@ public class CreateAccount {
         return Utils.waitForElementPresence(driver, By.id("create-account_form"), 30);
     }
 
-    private WebElement getCreateAccountEmailField() {
+    public WebElement getCreateAccountEmailField() {
         return Utils.waitForElementPresence(driver, By.id("//input[@id='email_create']"), 30);
     }
     public WebElement getCreateAccountBtn() {
