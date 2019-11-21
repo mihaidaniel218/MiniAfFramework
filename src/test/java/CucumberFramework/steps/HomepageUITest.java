@@ -120,8 +120,8 @@ public class HomepageUITest {
         System.out.println("MyStore logo is displayed");
     }
 
-    @And("^Blockbanner offer is displayed with 1170 height and 65 height$")
-    public void blockbannerOfferIsDisplayed() {
+    @Then("^Blockbanner offer is displayed with (\\d+) height and (\\d+) height$")
+    public void blockbannerOfferIsDisplayed(int arg0, int arg1) {
         String bannerWidth = homepageBanner().getAttribute("width");
         String bannerHeight = homepageBanner().getAttribute("height");
         assertEquals(bannerWidth, "1170", "Store logo does not have the expected width!");
@@ -129,7 +129,7 @@ public class HomepageUITest {
         System.out.println("Blockbanner offer is displayed");
     }
 
-    @And("^Advert One offer is displayed with (\\d+) width by (\\d+) height$")
+    @Then("^Advert One offer is displayed with (\\d+) width by (\\d+) height$")
     public void advertOneOfferIsDisplayedWithWidthByHeight(int arg0, int arg1) {
         String homepageAdvOneWidth =  homepageAdvertOne().getAttribute("width");
         String homepageAdvOneHeight = homepageAdvertOne().getAttribute("height");
@@ -138,7 +138,7 @@ public class HomepageUITest {
         System.out.println("Advert One offer is displayed with 381 width by 219 height");
     }
 
-    @And("^Advert Two offer is displayed with (\\d+) width by (\\d+) height$")
+    @Then("^Advert Two offer is displayed with (\\d+) width by (\\d+) height$")
     public void advertTwoOfferIsDisplayedWithWidthByHeight(int arg0, int arg1) {
         String homepageAdvTwoWidth =  homepageAdvertTwo().getAttribute("width");
         String homepageAdvTwoHeight = homepageAdvertTwo().getAttribute("height");
@@ -147,7 +147,7 @@ public class HomepageUITest {
         System.out.println("Advert Two offer is displayed with 381 width by 219 height");
     }
 
-    @And("^Advert Slider is displayed width (\\d+) width by (\\d+) height$")
+    @Then("^Advert Slider is displayed width (\\d+) width by (\\d+) height$")
     public void advertSliderIsDisplayedWidthWidthByHeight(int arg0, int arg1) {
         String homepageSliderWidth =  homepageSliderOne().getAttribute("width");
         String homepageAdvTwoHeight = homepageSliderOne().getAttribute("height");
@@ -156,7 +156,7 @@ public class HomepageUITest {
         System.out.println("Advert Slider offer is displayed with 779 width by 448 height");
     }
 
-    @And("^Contact phone number is correct$")
+    @Then("^Contact phone number is correct$")
     public void contactPhoneNumberIsCorrect() {
         String expectedPhoneNo = "0123-456-789";
         String actualPhoneNo = contactPhone().getText();
@@ -174,24 +174,24 @@ public class HomepageUITest {
         System.out.println("Customer service modal is displayed");
     }
 
-    @And("^Subject Heading dropdown is displayed$")
+    @Then("^Subject Heading dropdown is displayed$")
     public void subjectHeadingDropdownIsDisplayed() {
         System.out.println("Subject Heading dropdown is displayed");
     }
 
 
-    @And("^User's Email adress is displayed correctly$")
+    @Then("^User's Email adress is displayed correctly$")
     public void userSEmailAdressIsDisplayedCorrectly() {
         System.out.println("User's Email address is displayed correctly");
     }
 
-    @And("^Order reference dropdown is displayed$")
+    @Then("^Order reference dropdown is displayed$")
     public void orderReferenceDropdownIsDisplayed() {
         System.out.println("Order reference dropdown is displayed");
     }
 
 
-    @And("^Attach file modal is displayed$")
+    @Then("^Attach file modal is displayed$")
     public void attachFileModalIsDisplayed() throws InterruptedException {
         Thread.sleep(500);
         System.out.println("Attach file modal is displayed");
@@ -211,17 +211,17 @@ public class HomepageUITest {
       //throw new PendingException();
     }
 
-    @And("^Tops and Dresses sub-menus show up$")
+    @Then("^Tops and Dresses sub-menus show up$")
     public void topsAndDressesSubMenusShowUp() {
         System.out.println("Tops and Dresses sub-menus show up");
     }
 
-    @And("^Tops submenu has two entries$")
+    @Then("^Tops submenu has two entries$")
     public void topsSubmenuHasTwoEntries() {
         System.out.println("^Tops submenu has two entries$");
     }
 
-    @And("^Dresses submenu has three entries$")
+    @Then("^Dresses submenu has three entries$")
     public void dressesSubmenuHasThreeEntries() throws InterruptedException {
         System.out.println("Dresses submenu has three entries");
     }
@@ -244,17 +244,17 @@ public class HomepageUITest {
         driver.quit();
     }
 
-    @And("^font size for Women submenu is (\\d+) by (\\d+) or (\\d+) px$")
+    @Then("^font size for Women submenu is (\\d+) by (\\d+) or (\\d+) px$")
     public void fontSizeForWomenSubmenuIsByOrPx(int arg0, int arg1, int arg2) {
         System.out.println("Font size for Women submenu is " + arg0 + " " + arg1 + " " + arg2);
     }
 
-    @And("^font size for Dresses submenu is (\\d+) by (\\d+) or (\\d+) px$")
+    @Then("^font size for Dresses submenu is (\\d+) by (\\d+) or (\\d+) px$")
     public void fontSizeForDressesSubmenuIsByOrPx(int arg0, int arg1, int arg2) {
         System.out.println("^font size for Dresses submenu is " + arg0 + " " + arg1 + " " + arg2);
     }
 
-    @And("^font size for T-shirts submenu is (\\d+) by (\\d+) or (\\d+) px$")
+    @Then("^font size for T-shirts submenu is (\\d+) by (\\d+) or (\\d+) px$")
     public void fontSizeForTShirtsSubmenuIsByOrPx(int arg0, int arg1, int arg2) {
         System.out.println("^font size for T-shirts submenu is " + arg0 + " " + arg1 + " " + arg2);
     }
@@ -276,7 +276,7 @@ public class HomepageUITest {
         System.out.println(dressesCount + " dresses products are displayed");
     }
 
-    @And("^\"([^\"]*)\" is displayed in the heading counter area$")
+    @Then("^\"([^\"]*)\" is displayed in the heading counter area$")
     public void isDisplayedInTheHeadingCounterArea(String arg0) throws Throwable {
         assertTrue(homepage.headingCounter().isDisplayed());
         Assert.assertEquals(homepage.headingCounter().getText().substring(0, 1), "7");
@@ -286,7 +286,7 @@ public class HomepageUITest {
         /*throw new PendingException();*/
     }
 
-    @And("^the number of products from the list and the one displayed in the heading counter area is the same$")
+    @Then("^the number of products from the list and the one displayed in the heading counter area is the same$")
     public void theNumberOfProductsFromTheListAndTheOneDisplayedInTheHeadingCounterAreaIsTheSame() throws InterruptedException {
         String headCount = (homepage.headingCounter().getText().substring(0, 1));
         String dressesCount = String.valueOf((clothes.getDressesCount().size()));

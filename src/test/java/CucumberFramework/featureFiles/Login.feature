@@ -13,37 +13,37 @@ Feature: Login into account and check UI of site
   Scenario: Check store logo blockbanner and contact details
     Given User Navigates to Automationpractice HomePage
     Then MyStore logo is displayed with 350 width and 99 height
-    And Blockbanner offer is displayed with 1170 height and 65 height
-    And Advert One offer is displayed with 381 width by 219 height
-    And Advert Two offer is displayed with 381 width by 219 height
-    And Advert Slider is displayed width 779 width by 448 height
-    And Contact phone number is correct
+    Then Blockbanner offer is displayed with 1170 height and 65 height
+    Then Advert One offer is displayed with 381 width by 219 height
+    Then Advert Two offer is displayed with 381 width by 219 height
+    Then Advert Slider is displayed width 779 width by 448 height
+    Then Contact phone number is correct
     When User clicks on the Contact us link
     Then Customer service modal is displayed
-    And Subject Heading dropdown is displayed
-    And User's Email adress is displayed correctly
-    And Order reference dropdown is displayed
-    And Attach file modal is displayed
+    Then Subject Heading dropdown is displayed
+    Then User's Email adress is displayed correctly
+    Then Order reference dropdown is displayed
+    Then Attach file modal is displayed
 
   Scenario: Check product buttons font size and submenu composition
     Given User Navigates to Automationpractice HomePage
     When User hovers over the Women button tab
     Then tooltip "women" is displayed
-    And font size for Women submenu is 600 by 18 or 22 px
-    And Tops and Dresses sub-menus show up
-    And Tops submenu has two entries
-    And Dresses submenu has three entries
+    Then font size for Women submenu is 600 by 18 or 22 px
+    Then Tops and Dresses sub-menus show up
+    Then Tops submenu has two entries
+    Then Dresses submenu has three entries
     When user hovers over the Dresses button tab
     Then tooltip "dresses" is displayed
-    And font size for Dresses submenu is 600 by 18 or 22 px
-    And Casual Evening and Summer Dresses submenus are displayed
+    Then font size for Dresses submenu is 600 by 18 or 22 px
+    Then Casual Evening and Summer Dresses submenus are displayed
     When user hovers over the T-shirts button tab
     Then tooltip "t-shirts" is displayed
-    And font size for T-shirts submenu is 600 by 18 or 22 px
+    Then font size for T-shirts submenu is 600 by 18 or 22 px
 
   Scenario: Search for different products and confirm search is correct
     Given User Navigates to Automationpractice HomePage
     When User inputs Dresses in Search box and clicks the submit search button
     Then A number of dresses products are displayed
-    And "n results have been found" is displayed in the heading counter area
-    And the number of products from the list and the one displayed in the heading counter area is the same
+    Then "n results have been found" is displayed in the heading counter area
+    Then the number of products from the list and the one displayed in the heading counter area is the same

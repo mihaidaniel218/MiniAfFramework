@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e8250031-a3e3-4737-8438-c0a48aa1c942" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/CreateAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/CreateAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/CreateAccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/CreateAccountForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/SignInForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/SignInForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/automationpractice/com/CreateAccountFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/automationpractice/com/CreateAccountFormTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CucumberFramework/featureFiles/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberFramework/featureFiles/Login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CucumberFramework/steps/HomepageUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberFramework/steps/HomepageUITest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +74,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.CreateAccountFormTest">
+  <component name="RunManager" selected="Cucumber java.Feature: Login">
+    <configuration name="Feature: Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/CucumberFramework/featureFiles/Login.feature" />
+      <option name="GLUE" value="CucumberFramework.steps" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="automationpractice.com" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
+      <option name="SUGGESTED_NAME" value="Feature: Login" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestRunner" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="automationpractice.com" />
       <extension name="coverage">
@@ -164,25 +180,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShopWorkflowTest.selectClothes" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="automationpractice.com" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="automationpractice.com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="automationpractice.com" />
-      <option name="MAIN_CLASS_NAME" value="automationpractice.com.ShopWorkflowTest" />
-      <option name="METHOD_NAME" value="selectClothes" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="0" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Login.feature" type="substepsFeature" factoryName="Substeps Feature" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="" />
       <option name="allowRunningInParallel" value="false" />
@@ -226,11 +223,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber java.Feature: Login" />
         <item itemvalue="TestNG.CreateAccountFormTest" />
         <item itemvalue="TestNG.CreateAccountFormTest.requiredFieldsEmpty" />
         <item itemvalue="TestNG.CreateAccountFormTest.autenthicationPage" />
         <item itemvalue="TestNG.ShopWorkflowTest" />
-        <item itemvalue="TestNG.ShopWorkflowTest.selectClothes" />
       </list>
     </recent_temporary>
   </component>
