@@ -248,6 +248,124 @@ public class CreateAccountForm {
         addressAlias.sendKeys(alias);
     }
 
+   // *********** ERRORS **************** //
+    public WebElement getErrorPanel() {
+        return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \"You must register\")]/../.."), 30);
+    }
+
+    public WebElement getPhoneNumberError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \"You must register at least one phone number.\")]"), 30);
+    }
+
+    public WebElement getHomePhoneInvalidError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \" is invalid.\")]/b[contains(text(), \"phone\")]"), 30);
+    }
+
+    public WebElement getMobilePhoneInvalidError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \" is invalid.\")]/b[contains(text(), \"phone_mobile\")]"), 30);
+    }
+
+    public WebElement getLastNameError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//b[contains(text(), \"lastname\")]"), 30);
+    }
+
+    public WebElement getLastNameInvalidError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \" is invalid.\")]/b[contains(text(), \"lastname\")]"), 30);
+    }
+
+    public WebElement getFirstNameError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//b[contains(text(), \"firstname\")]"), 30);
+    }
+
+    public WebElement getFirstNameInvalidError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \" is invalid.\")]/b[contains(text(), \"firstname\")]"), 30);
+    }
+
+    public WebElement getEmailRequiredError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//b[contains(text(), \"lastname\")]"), 30);
+    }
+
+    public WebElement getEmailInvalidError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \" is invalid.\")]/b[contains(text(), \"email\")]"), 30);
+    }
+
+    public WebElement getEmailBeenRegistered() {
+        return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \"An account using this\")]"), 30);
+    }
+
+    public WebElement getPasswordRequiredError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//b[contains(text(), \"passwd\")]"), 30);
+    }
+
+    public WebElement getPasswordInvalidError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \" is invalid.\")]/b[contains(text(), \"passwd\")]"), 30);
+    }
+
+    public WebElement getCountryRequiredError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//b[contains(text(), \"id_country\")]"), 30);
+    }
+
+    public WebElement getAddressAliasRequiredError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//b[contains(text(), \"alias\")]"), 30);
+    }
+
+    public WebElement getAddressRequiredError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//b[contains(text(), \"address1\")]"), 30);
+    }
+
+    public WebElement getCityRequiredError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//b[contains(text(), \"city\")]"), 30);
+    }
+
+    public WebElement getCountryUnselectedError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \"Country is invalid\")]"), 30);
+    }
+
+    public WebElement getStateRequredError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \"This country requires you to choose a State.\")]"), 30);
+    }
+
+    public WebElement getPostalCodeError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \"The Zip/Postal code you\")]"), 30);
+    }
+
+
+    /****** HIGHLIGHTED ERRORS ******/
+
+
+    public WebElement getFirstNameHighlightedGreen() {
+        return Utils.waitForElementPresence(driver, By.xpath("//div[@class=\"required form-group form-ok\"]//input[@id=\"customer_firstname\"]"), 30);
+    }
+
+    public WebElement getFirstNameHighlightedRed() {
+        return Utils.waitForElementPresence(driver, By.xpath("//div[@class=\"required form-group form-error\"]//input[@id=\"customer_firstname\"]"), 30);
+    }
+
+    public WebElement getLastNameHighlightedGreen() {
+        return Utils.waitForElementPresence(driver, By.xpath("//div[@class=\"required form-group form-ok\"]//input[@id=\"customer_lastname\"]"), 30);
+    }
+
+    public WebElement getLastNameHighlightedRed() {
+        return Utils.waitForElementPresence(driver, By.xpath("//div[@class=\"required form-group form-error\"]//input[@id=\"customer_lastname\"]"), 30);
+    }
+
+    public WebElement getEmailHighlightedGreen() {
+        return Utils.waitForElementPresence(driver, By.xpath("//div[@class=\"required form-group form-ok\"]//input[@id=\"email\"]"), 30);
+    }
+
+    public WebElement getEmailHighlightedRed() {
+        return Utils.waitForElementPresence(driver, By.xpath("//div[@class=\"required form-group form-error\"]//input[@id=\"email\"]"), 30);
+    }
+
+    public WebElement getPasswordHighlightedGreen() {
+        return Utils.waitForElementPresence(driver, By.xpath("//div[@class=\"required password form-group form-ok\"]//input[@id=\"passwd\"]"), 30);
+    }
+
+    public WebElement getPasswordHighlightedRed() {
+        return Utils.waitForElementPresence(driver, By.xpath("//div[@class=\"required password form-group form-error\"]//input[@id=\"passwd\"]"), 30);
+    }
+
+    //Succesfully Created Account
 
     public WebElement successfullyCreatedAccount() {
         return (WebElement) driver;

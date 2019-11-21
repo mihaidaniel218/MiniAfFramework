@@ -13,8 +13,8 @@ public class SignInForm {
         this.driver = driver;
     }
 
-    public WebElement getSignInForm() {
-        return Utils.waitForElementPresence(driver, By.id("login_form"), 30);
+    public WebElement getSignInForm(WebDriver driver) {
+        return Utils.waitForElementPresence(this.driver, By.id("login_form"), 30);
     }
 
     public WebElement getSignInEmailField() {

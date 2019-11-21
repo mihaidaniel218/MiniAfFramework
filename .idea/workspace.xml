@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8250031-a3e3-4737-8438-c0a48aa1c942" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/automationpractice/com/CreateAccountFormTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/CreateAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/CreateAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/CreateAccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/CreateAccountForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/SignInForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/SignInForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/automationpractice/com/CreateAccountFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/automationpractice/com/CreateAccountFormTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestRunner">
+  <component name="RunManager" selected="TestNG.CreateAccountFormTest">
     <configuration name="TestRunner" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="automationpractice.com" />
       <extension name="coverage">
@@ -93,20 +94,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/Projects/MiniAfFramework/NegativeTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateAccountFormTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="automationpractice.com" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/NegativeTests.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="automationpractice.com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="automationpractice.com" />
+      <option name="MAIN_CLASS_NAME" value="automationpractice.com.CreateAccountFormTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/Projects/MiniAfFramework/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateAccountFormTest.autenthicationPage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="automationpractice.com" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="automationpractice.com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="automationpractice.com" />
+      <option name="MAIN_CLASS_NAME" value="automationpractice.com.CreateAccountFormTest" />
+      <option name="METHOD_NAME" value="autenthicationPage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateAccountFormTest.requiredFieldsEmpty" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="automationpractice.com" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="automationpractice.com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="automationpractice.com" />
+      <option name="MAIN_CLASS_NAME" value="automationpractice.com.CreateAccountFormTest" />
+      <option name="METHOD_NAME" value="requiredFieldsEmpty" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -192,10 +226,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CreateAccountFormTest" />
+        <item itemvalue="TestNG.CreateAccountFormTest.requiredFieldsEmpty" />
+        <item itemvalue="TestNG.CreateAccountFormTest.autenthicationPage" />
         <item itemvalue="TestNG.ShopWorkflowTest" />
         <item itemvalue="TestNG.ShopWorkflowTest.selectClothes" />
-        <item itemvalue="TestNG.D:/Projects/MiniAfFramework/NegativeTests.xml" />
-        <item itemvalue="TestNG.D:/Projects/MiniAfFramework/testng.xml" />
       </list>
     </recent_temporary>
   </component>

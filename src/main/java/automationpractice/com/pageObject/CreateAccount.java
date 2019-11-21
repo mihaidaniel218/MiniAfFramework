@@ -16,11 +16,11 @@ public class CreateAccount {
      //form[@id='create-account_form']
 
     public WebElement getCreateAccountForm() {
-        return Utils.waitForElementPresence(driver, By.id("create-account_form"), 30);
+        return Utils.waitForElementPresence(driver, By.xpath("//form[@id='create-account_form']"), 30);
     }
 
     public WebElement getCreateAccountEmailField() {
-        return Utils.waitForElementPresence(driver, By.id("//input[@id='email_create']"), 30);
+        return Utils.waitForElementPresence(driver, By.xpath("//input[@id='email_create']"), 30);
     }
     public WebElement getCreateAccountBtn() {
         return Utils.waitForElementPresence(driver, By.xpath("//form[@id='create-account_form']//span[1]"), 30);
