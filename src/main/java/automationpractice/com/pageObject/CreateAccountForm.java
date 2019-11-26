@@ -370,4 +370,54 @@ public class CreateAccountForm {
     public WebElement successfullyCreatedAccount() {
         return (WebElement) driver;
     }
+
+    public void fillDataInFields () {
+        setCustomerFirstNameField("Michael");
+        setCustomerLastNameField("Daniel");
+        setCustomerEmailField("mdaniel219test@mailinator.com");
+        setCustomerPasswordField("masterPWM222*");
+
+        selectCustomerDateOfBirthDay().selectByValue("23");
+        selectCustomerDateOfBirthMonth().selectByValue("7");
+        selectCustomerDateOfBirthYear().selectByValue("1997");
+
+       setCustomerFirstNameField("Michael");
+        setCustomerLastNameField("Daniel");
+        setCompanyField("Softvision");
+        setAddressField("Sos. Nationala nr. 37, 00000, Softvision");
+        setAddressFieldTwo("Cladirea Aria, et. 1, Iasi");
+        setCityField("Iasi");
+        selectState().selectByVisibleText("Alaska");
+        setPostalCodeField("70054");
+        setHomePhoneField("0337455455");
+        setMobilePhoneField("+40 777 666 555");
+
+        setCustomerTitleMr();
+        setAddressAliasField("My Address");
+    }
+    public void clearDataFromFields() {
+       getAddressAliasField().clear();
+        setCustomerEmailField("");
+        selectCountry("-");
+
+        setCustomerFirstNameField("");
+        setCustomerLastNameField("");
+        setCustomerEmailField("");
+        setCustomerPasswordField("");
+
+        selectCustomerDateOfBirthDay().selectByVisibleText("-");
+        selectCustomerDateOfBirthMonth().selectByVisibleText("-");
+        selectCustomerDateOfBirthYear().selectByVisibleText("-");
+
+        getCustomerFirstNameField().clear();
+        getCustomerLastNameField().clear();
+        getCompanyField().clear();
+        getAddressField().clear();
+        getAddressFieldTwo().clear();
+        getCity().clear();
+        selectState().selectByVisibleText("-");
+        selectCountry().selectByVisibleText("-");
+        getHomePhoneField().clear();
+        getMobilePhoneField().clear();
+    }
 }
