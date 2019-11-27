@@ -247,6 +247,7 @@ public class CreateAccountForm {
     }
 
     // *********** ERRORS **************** //
+
     public WebElement getErrorPanel() {
         return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \"You must register\")]/../.."), 30);
     }
@@ -576,28 +577,5 @@ public class CreateAccountForm {
                 getHomePhoneField().clear();
                 getMobilePhoneField().clear();
         }
-        getAddressAliasField().clear();
-        setCustomerEmailField("");
-        selectCountry("-");
-
-        setCustomerFirstNameField("");
-        setCustomerLastNameField("");
-        setCustomerEmailField("");
-        setCustomerPasswordField("");
-
-        selectCustomerDateOfBirthDay().selectByVisibleText("-");
-        selectCustomerDateOfBirthMonth().selectByVisibleText("-");
-        selectCustomerDateOfBirthYear().selectByVisibleText("-");
-
-        getCustomerFirstNameField().clear();
-        getCustomerLastNameField().clear();
-        getCompanyField().clear();
-        getAddressField().clear();
-        getAddressFieldTwo().clear();
-        getCity().clear();
-        selectState().selectByVisibleText("-");
-        selectCountry().selectByVisibleText("-");
-        getHomePhoneField().clear();
-        getMobilePhoneField().clear();
     }
 }
