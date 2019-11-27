@@ -87,9 +87,7 @@ public class CreateAccountFormTest {
         createAccountForm.clearDataFromFields();
         Thread.sleep(3000);
         createAccountForm.getRegisterBtn().click();
-
         assertAccountCreateExpectedErrors();
-
         createAccountForm.selectCountry("United States");
         createAccountForm.getPostalCodeField().clear();
         createAccountForm.getRegisterBtn().click();
