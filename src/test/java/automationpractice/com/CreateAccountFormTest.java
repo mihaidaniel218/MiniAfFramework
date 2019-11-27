@@ -76,7 +76,6 @@ public class CreateAccountFormTest {
     public void personalInfoFields() {
 
         createAccountForm.fillDataInFields("setAllFields");
-
         //createAccountForm.getRegisterBtn().click();
 
     }
@@ -96,7 +95,7 @@ public class CreateAccountFormTest {
         Assert.assertTrue(createAccountForm.getPostalCodeError().isDisplayed());
     }
 
-    private void assertAccountCreateExpectedErrors(String errorType) {
+/*    private void assertAccountCreateExpectedErrors(String errorType) {
        switch (errorType) {
            case "PhoneNumberError":
                Assert.assertTrue(createAccountForm.getPhoneNumberError().isDisplayed());
@@ -140,6 +139,6 @@ public class CreateAccountFormTest {
                Assert.assertTrue(createAccountForm.getCountryUnselectedError().isDisplayed());
                break;
        }
+    }*/
 
-    }
 }
