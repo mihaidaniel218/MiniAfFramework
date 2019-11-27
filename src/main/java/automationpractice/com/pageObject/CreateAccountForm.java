@@ -576,6 +576,7 @@ public class CreateAccountForm {
                 selectCountry().selectByVisibleText("-");
                 getHomePhoneField().clear();
                 getMobilePhoneField().clear();
+                break;
         }
     }
 }
