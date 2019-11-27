@@ -1,22 +1,20 @@
 package automationpractice.com.pageObject;
 
-import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import utils.Utils;
 
 public class CreateAccountForm {
 
+    private static final String AccountCreationForm = "account-creation_form";
     private WebDriver driver;
 
     public CreateAccountForm(WebDriver driver) {
         this.driver = driver;
     }
-
-    private static final String AccountCreationForm = "account-creation_form";
-
 
     public WebElement getAccountCreationForm() {
         return Utils.waitForElementPresence(driver, By.id("account-creation_form"), 30);
@@ -34,39 +32,63 @@ public class CreateAccountForm {
         return Utils.waitForElementPresence(driver, By.id("customer_firstname"), 30);
     }
 
+    public void setCustomerFirstNameField(String firstName) {
+        WebElement customerFirstNameField = this.getCustomerFirstNameField();
+        customerFirstNameField.clear();
+        customerFirstNameField.sendKeys(firstName);
+    }
+
     public WebElement getCustomerLastNameField() {
         return Utils.waitForElementPresence(driver, By.id("customer_lastname"), 30);
     }
 
-    public WebElement getCustomerEmailField() {
-        return Utils.waitForElementPresence(driver, By.id("email"), 30);
-    }
-
-    public WebElement getCustomerPasswordField() {
-        return Utils.waitForElementPresence(driver, By.id("passwd"), 30);
+    public void setCustomerLastNameField(String lastName) {
+        WebElement customerLastNameField = this.getCustomerLastNameField();
+        customerLastNameField.clear();
+        customerLastNameField.sendKeys(lastName);
     }
 
 /*    public WebElement getCustomerDateOfBirthDay() {
         return Utils.waitForElementPresence(driver, By.id("uniform-days");
     }*/
 
-    public Select  selectCustomerDateOfBirthDay() {
-        WebElement dayOfBirth = Utils.waitForElementPresence(driver, By.id("days"), 30);
-        return new Select(dayOfBirth);
+    public WebElement getCustomerEmailField() {
+        return Utils.waitForElementPresence(driver, By.id("email"), 30);
     }
 
     //	public WebElement getCustomerDateOfBirthMonth() {
 //		return Utils.waitForElementPresence(driver, By.id("uniform-months"), 30);
 //	}
 
-    public Select selectCustomerDateOfBirthMonth() {
-        WebElement monthOfBirth = Utils.waitForElementPresence(driver, By.id("months"), 30);
-        return new Select(monthOfBirth);
+    public void setCustomerEmailField(String email) {
+        WebElement customerEmailField = this.getCustomerEmailField();
+        customerEmailField.clear();
+        customerEmailField.sendKeys(email);
     }
 
 //	public WebElement getCustomerDateOfBirthYear() {
 //		return Utils.waitForElementPresence(driver, By.id("uniform-years"), 30);
 //	}
+
+    public WebElement getCustomerPasswordField() {
+        return Utils.waitForElementPresence(driver, By.id("passwd"), 30);
+    }
+
+    public void setCustomerPasswordField(String password) {
+        WebElement customerPasswordField = this.getCustomerPasswordField();
+        customerPasswordField.clear();
+        customerPasswordField.sendKeys(password);
+    }
+
+    public Select selectCustomerDateOfBirthDay() {
+        WebElement dayOfBirth = Utils.waitForElementPresence(driver, By.id("days"), 30);
+        return new Select(dayOfBirth);
+    }
+
+    public Select selectCustomerDateOfBirthMonth() {
+        WebElement monthOfBirth = Utils.waitForElementPresence(driver, By.id("months"), 30);
+        return new Select(monthOfBirth);
+    }
 
     public Select selectCustomerDateOfBirthYear() {
         WebElement yearOfBirth = Utils.waitForElementPresence(driver, By.id("years"), 30);
@@ -85,12 +107,30 @@ public class CreateAccountForm {
         return Utils.waitForElementPresence(driver, By.id("company"), 30);
     }
 
+    public void setCompanyField(String company) {
+        WebElement companyField = this.getCompanyField();
+        companyField.clear();
+        companyField.sendKeys(company);
+    }
+
     public WebElement getAddressField() {
         return Utils.waitForElementPresence(driver, By.id("address1"), 30);
     }
 
+    public void setAddressField(String address) {
+        WebElement addressField = this.getAddressField();
+        addressField.clear();
+        addressField.sendKeys(address);
+    }
+
     public WebElement getAddressFieldTwo() {
         return Utils.waitForElementPresence(driver, By.id("address2"), 30);
+    }
+
+    public void setAddressFieldTwo(String addresTwo) {
+        WebElement addresField = this.getAddressFieldTwo();
+        addresField.clear();
+        addresField.sendKeys(addresTwo);
     }
 
     public WebElement getCity() {
@@ -107,8 +147,16 @@ public class CreateAccountForm {
         return new Select(state);
     }
 
+    // ************ SETTERS **********//
+
     public WebElement getPostalCodeField() {
         return Utils.waitForElementPresence(driver, By.id("postcode"), 30);
+    }
+
+    public void setPostalCodeField(String zip) {
+        WebElement postalCode = this.getPostalCodeField();
+        postalCode.clear();
+        postalCode.sendKeys(zip);
     }
 
     public WebElement getAdditionalInformationField() {
@@ -119,12 +167,30 @@ public class CreateAccountForm {
         return Utils.waitForElementPresence(driver, By.id("phone"), 30);
     }
 
+    public void setHomePhoneField(String phone) {
+        WebElement homePhone = this.getHomePhoneField();
+        homePhone.clear();
+        homePhone.sendKeys(phone);
+    }
+
     public WebElement getMobilePhoneField() {
         return Utils.waitForElementPresence(driver, By.id("phone_mobile"), 30);
     }
 
+    public void setMobilePhoneField(String phone) {
+        WebElement mobilePhone = this.getMobilePhoneField();
+        mobilePhone.clear();
+        mobilePhone.sendKeys(phone);
+    }
+
     public WebElement getAddressAliasField() {
         return Utils.waitForElementPresence(driver, By.id("alias"), 30);
+    }
+
+    public void setAddressAliasField(String alias) {
+        WebElement addressAlias = this.getAddressAliasField();
+        addressAlias.clear();
+        addressAlias.sendKeys(alias);
     }
 
     public WebElement getRegisterBtn() {
@@ -135,38 +201,12 @@ public class CreateAccountForm {
         return Utils.waitForElementPresence(driver, By.xpath("//p[contains(text(), \\\"Welcome to your account.\\\")]"), 30);
     }
 
-    // ************ SETTERS **********//
-
     public void setCustomerTitleMr() {
         this.getCustomerTitleMr().click();
     }
 
     public void setCustomerTitleMrs() {
         this.getCustomerTitleMrs().click();
-    }
-
-    public void setCustomerFirstNameField(String firstName) {
-        WebElement customerFirstNameField = this.getCustomerFirstNameField();
-        customerFirstNameField.clear();
-        customerFirstNameField.sendKeys(firstName);
-    }
-
-    public void setCustomerLastNameField(String lastName) {
-        WebElement customerLastNameField = this.getCustomerLastNameField();
-        customerLastNameField.clear();
-        customerLastNameField.sendKeys(lastName);
-    }
-
-    public void setCustomerEmailField(String email) {
-        WebElement customerEmailField = this.getCustomerEmailField();
-        customerEmailField.clear();
-        customerEmailField.sendKeys(email);
-    }
-
-    public void setCustomerPasswordField(String password) {
-        WebElement customerPasswordField = this.getCustomerPasswordField();
-        customerPasswordField.clear();
-        customerPasswordField.sendKeys(password);
     }
 
     public void selectCustomerDateOfBirthDay(String day) {
@@ -184,24 +224,6 @@ public class CreateAccountForm {
         yearOfBirth.selectByValue(year);
     }
 
-    public void setCompanyField(String company) {
-        WebElement companyField = this.getCompanyField();
-        companyField.clear();
-        companyField.sendKeys(company);
-    }
-
-    public void setAddressField(String address) {
-        WebElement addressField = this.getAddressField();
-        addressField.clear();
-        addressField.sendKeys(address);
-    }
-
-    public void setAddressFieldTwo(String addresTwo) {
-        WebElement addresField = this.getAddressFieldTwo();
-        addresField.clear();
-        addresField.sendKeys(addresTwo);
-    }
-
     public void setCityField(String city) {
         WebElement cityField = this.getCity();
         cityField.clear();
@@ -211,12 +233,6 @@ public class CreateAccountForm {
     public void selectState(String state) {
         Select selectState = this.selectState();
         selectState.selectByValue(state);
-    }
-
-    public void setPostalCodeField(String zip) {
-        WebElement postalCode = this.getPostalCodeField();
-        postalCode.clear();
-        postalCode.sendKeys(zip);
     }
 
     public void selectCountry(String country) {
@@ -230,25 +246,7 @@ public class CreateAccountForm {
         additionalInfo.sendKeys(info);
     }
 
-    public void setHomePhoneField(String phone) {
-        WebElement homePhone = this.getHomePhoneField();
-        homePhone.clear();
-        homePhone.sendKeys(phone);
-    }
-
-    public void setMobilePhoneField(String phone) {
-        WebElement mobilePhone = this.getMobilePhoneField();
-        mobilePhone.clear();
-        mobilePhone.sendKeys(phone);
-    }
-
-    public void setAddressAliasField(String alias) {
-        WebElement addressAlias = this.getAddressAliasField();
-        addressAlias.clear();
-        addressAlias.sendKeys(alias);
-    }
-
-   // *********** ERRORS **************** //
+    // *********** ERRORS **************** //
     public WebElement getErrorPanel() {
         return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \"You must register\")]/../.."), 30);
     }
@@ -365,38 +363,220 @@ public class CreateAccountForm {
         return Utils.waitForElementPresence(driver, By.xpath("//div[@class=\"required password form-group form-error\"]//input[@id=\"passwd\"]"), 30);
     }
 
-    //Succesfully Created Account
+    //Successfully Created Account
 
     public WebElement successfullyCreatedAccount() {
         return (WebElement) driver;
     }
 
-    public void fillDataInFields () {
-        setCustomerFirstNameField("Michael");
-        setCustomerLastNameField("Daniel");
-        setCustomerEmailField("mdaniel219test@mailinator.com");
-        setCustomerPasswordField("masterPWM222*");
+    public void fillDataInFields(String fieldName) {
 
-        selectCustomerDateOfBirthDay().selectByValue("23");
-        selectCustomerDateOfBirthMonth().selectByValue("7");
-        selectCustomerDateOfBirthYear().selectByValue("1997");
+        switch (fieldName) {
+            case "CustomerFirstNameField":
+                setCustomerFirstNameField("Michael");
+                break;
+            case "CustomerLastNameField":
+                setCustomerLastNameField("Daniel");
+                break;
+            case "CustomerEmailField":
+                setCustomerEmailField("mdaniel219test@mailinator.com");
+                break;
+            case "CustomerPasswordField":
+                setCustomerPasswordField("masterPWM222*");
+                break;
+            case "CustomerDateOfBirthDay":
+                selectCustomerDateOfBirthDay().selectByValue("23");
+                break;
+            case "CustomerDateOfBirthMonth":
+                selectCustomerDateOfBirthMonth().selectByValue("7");
+                break;
+            case "CustomerDateOfBirthYear":
+                selectCustomerDateOfBirthYear().selectByValue("1997");
+                break;
+            case "CompanyField":
+                setCompanyField("Softvision");
+                break;
+            case "setAddressField":
+                setAddressField("Sos. Nationala nr. 37, 00000, Softvision");
+                break;
+            case "AddressFieldTwo":
+                setAddressFieldTwo("Cladirea Aria, et. 1, Iasi");
+                break;
+            case "CityField":
+                setCityField("Iasi");
+                break;
+            case "selectState":
+                selectState().selectByVisibleText("Alaska");
+                break;
+            case "PostalCodeField":
+                setPostalCodeField("70054");
+            case "HomePhoneField":
+                setHomePhoneField("0337455455");
+                break;
+            case "MobilePhoneField":
+                setMobilePhoneField("+40 777 666 555");
+                break;
+            case "CustomerTitleMr":
+                setCustomerTitleMr();
+                break;
+            case "setAddressAliasField":
+                setAddressAliasField("My Address");
+            case "setAllFields":
+                setCustomerFirstNameField("Michael");
+                setCustomerLastNameField("Daniel");
+                setCustomerEmailField("mdaniel219test@mailinator.com");
+                setCustomerPasswordField("masterPWM222*");
 
-       setCustomerFirstNameField("Michael");
-        setCustomerLastNameField("Daniel");
-        setCompanyField("Softvision");
-        setAddressField("Sos. Nationala nr. 37, 00000, Softvision");
-        setAddressFieldTwo("Cladirea Aria, et. 1, Iasi");
-        setCityField("Iasi");
-        selectState().selectByVisibleText("Alaska");
-        setPostalCodeField("70054");
-        setHomePhoneField("0337455455");
-        setMobilePhoneField("+40 777 666 555");
+                selectCustomerDateOfBirthDay().selectByValue("23");
+                selectCustomerDateOfBirthMonth().selectByValue("7");
+                selectCustomerDateOfBirthYear().selectByValue("1997");
 
-        setCustomerTitleMr();
-        setAddressAliasField("My Address");
+                setCustomerFirstNameField("Michael");
+                setCustomerLastNameField("Daniel");
+                setCompanyField("Softvision");
+                setAddressField("Sos. Nationala nr. 37, 00000, Softvision");
+                setAddressFieldTwo("Cladirea Aria, et. 1, Iasi");
+                setCityField("Iasi");
+                selectState().selectByVisibleText("Alaska");
+                setPostalCodeField("70054");
+                setHomePhoneField("0337455455");
+                setMobilePhoneField("+40 777 666 555");
+
+                setCustomerTitleMr();
+                setAddressAliasField("My Address");
+                break;
+        }
     }
-    public void clearDataFromFields() {
-       getAddressAliasField().clear();
+
+    public void assertAccountCreateExpectedErrors(String fieldName) {
+        switch (fieldName) {
+            case "PhoneNumberError":
+                Assert.assertTrue(getPhoneNumberError().isDisplayed());
+                break;
+            case "LastNameError":
+                Assert.assertTrue(getLastNameError().isDisplayed());
+                break;
+            case "FirstNameError":
+                Assert.assertTrue(getFirstNameError().isDisplayed());
+                break;
+            case "EmailRequiredError":
+                Assert.assertTrue(getEmailRequiredError().isDisplayed());
+                break;
+            case "PasswordRequiredError":
+                Assert.assertTrue(getPasswordRequiredError().isDisplayed());
+                break;
+            case "CountryRequiredError":
+                Assert.assertTrue(getCountryRequiredError().isDisplayed());
+                break;
+            case "AddressRequiredError":
+                Assert.assertTrue(getAddressRequiredError().isDisplayed());
+                break;
+            case "AddressAliasRequiredError":
+                Assert.assertTrue(getAddressAliasRequiredError().isDisplayed());
+                break;
+            case "CityRequiredError":
+                Assert.assertTrue(getCityRequiredError().isDisplayed());
+                break;
+            case "CountryUnselectedError":
+                Assert.assertTrue(getCountryUnselectedError().isDisplayed());
+                break;
+            case "AssertAll":
+                Assert.assertTrue(getPhoneNumberError().isDisplayed());
+                Assert.assertTrue(getLastNameError().isDisplayed());
+                Assert.assertTrue(getFirstNameError().isDisplayed());
+                Assert.assertTrue(getEmailRequiredError().isDisplayed());
+                Assert.assertTrue(getPasswordRequiredError().isDisplayed());
+                Assert.assertTrue(getCountryRequiredError().isDisplayed());
+                Assert.assertTrue(getAddressRequiredError().isDisplayed());
+                Assert.assertTrue(getAddressAliasRequiredError().isDisplayed());
+                Assert.assertTrue(getCityRequiredError().isDisplayed());
+                Assert.assertTrue(getCountryUnselectedError().isDisplayed());
+                break;
+        }
+    }
+
+    public void clearDataFromFields(String fieldName) {
+        switch (fieldName) {
+            case "AddressAliasField":
+                getAddressAliasField().clear();
+                break;
+            case "CustomerEmailField":
+                setCustomerEmailField("");
+                break;
+            case "selectCountryOne":
+                selectCountry().selectByVisibleText("-");
+                break;
+            case "CustomerFirstNameField":
+                getCustomerFirstNameField().clear();
+                ;
+                break;
+            case "CustomerLastNameField":
+                getCustomerLastNameField().clear();
+                break;
+            case "CustomerPasswordField":
+                getCustomerPasswordField().clear();
+                break;
+            case "CustomerDateOfBirthDay":
+                selectCustomerDateOfBirthDay().selectByVisibleText("-");
+                break;
+            case "CustomerDateOfBirthMonth":
+                selectCustomerDateOfBirthMonth().selectByVisibleText("-");
+                break;
+            case "CustomerDateOfBirthYear":
+                selectCustomerDateOfBirthYear().selectByVisibleText("-");
+                break;
+            case "CompanyField":
+                getCompanyField().clear();
+                break;
+            case "setAddressField":
+                getAddressField().clear();
+                break;
+            case "AddressFieldTwo":
+                getAddressFieldTwo().clear();
+                break;
+            case "CityField":
+                getCity().clear();
+                break;
+            case "selectState":
+                selectState().selectByVisibleText("-");
+                break;
+            case "selectCountry":
+                selectCountry().selectByVisibleText("-");
+                break;
+            case "PostalCodeField":
+                setPostalCodeField("");
+            case "HomePhoneField":
+                getHomePhoneField().clear();
+                break;
+            case "MobilePhoneField":
+                getMobilePhoneField().clear();
+                break;
+            case "clearAllFields":
+                getAddressAliasField().clear();
+                //setCustomerEmailField("");
+                selectCountry("-");
+
+                setCustomerFirstNameField("");
+                setCustomerLastNameField("");
+                setCustomerEmailField("");
+                setCustomerPasswordField("");
+
+                selectCustomerDateOfBirthDay().selectByVisibleText("-");
+                selectCustomerDateOfBirthMonth().selectByVisibleText("-");
+                selectCustomerDateOfBirthYear().selectByVisibleText("-");
+
+                getCustomerFirstNameField().clear();
+                getCustomerLastNameField().clear();
+                getCompanyField().clear();
+                getAddressField().clear();
+                getAddressFieldTwo().clear();
+                getCity().clear();
+                selectState().selectByVisibleText("-");
+                selectCountry().selectByVisibleText("-");
+                getHomePhoneField().clear();
+                getMobilePhoneField().clear();
+        }
+        getAddressAliasField().clear();
         setCustomerEmailField("");
         selectCountry("-");
 

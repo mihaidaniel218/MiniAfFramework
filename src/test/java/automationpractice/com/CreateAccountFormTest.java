@@ -75,7 +75,7 @@ public class CreateAccountFormTest {
     @Test(priority = 3)
     public void personalInfoFields() {
 
-        createAccountForm.fillDataInFields();
+        createAccountForm.fillDataInFields("setAllFields");
 
         //createAccountForm.getRegisterBtn().click();
 
@@ -84,10 +84,10 @@ public class CreateAccountFormTest {
     @Test(priority = 4)
     public void requiredFieldsEmpty() throws InterruptedException {
 
-        createAccountForm.clearDataFromFields();
+        createAccountForm.clearDataFromFields("clearAllFields");
         Thread.sleep(3000);
         createAccountForm.getRegisterBtn().click();
-        assertAccountCreateExpectedErrors();
+        createAccountForm.assertAccountCreateExpectedErrors("AssertAll");
         createAccountForm.selectCountry("United States");
         createAccountForm.getPostalCodeField().clear();
         createAccountForm.getRegisterBtn().click();
@@ -96,16 +96,50 @@ public class CreateAccountFormTest {
         Assert.assertTrue(createAccountForm.getPostalCodeError().isDisplayed());
     }
 
-    private void assertAccountCreateExpectedErrors() {
-        Assert.assertTrue(createAccountForm.getPhoneNumberError().isDisplayed());
-        Assert.assertTrue(createAccountForm.getLastNameError().isDisplayed());
-        Assert.assertTrue(createAccountForm.getFirstNameError().isDisplayed());
-        Assert.assertTrue(createAccountForm.getEmailRequiredError().isDisplayed());
-        Assert.assertTrue(createAccountForm.getPasswordRequiredError().isDisplayed());
-        Assert.assertTrue(createAccountForm.getCountryRequiredError().isDisplayed());
-        Assert.assertTrue(createAccountForm.getAddressRequiredError().isDisplayed());
-        Assert.assertTrue(createAccountForm.getAddressAliasRequiredError().isDisplayed());
-        Assert.assertTrue(createAccountForm.getCityRequiredError().isDisplayed());
-        Assert.assertTrue(createAccountForm.getCountryUnselectedError().isDisplayed());
+    private void assertAccountCreateExpectedErrors(String errorType) {
+       switch (errorType) {
+           case "PhoneNumberError":
+               Assert.assertTrue(createAccountForm.getPhoneNumberError().isDisplayed());
+               break;
+           case "LastNameError":
+               Assert.assertTrue(createAccountForm.getLastNameError().isDisplayed());
+               break;
+           case "FirstNameError":
+               Assert.assertTrue(createAccountForm.getFirstNameError().isDisplayed());
+               break;
+           case "EmailRequiredError":
+               Assert.assertTrue(createAccountForm.getEmailRequiredError().isDisplayed());
+               break;
+           case "PasswordRequiredError":
+               Assert.assertTrue(createAccountForm.getPasswordRequiredError().isDisplayed());
+               break;
+           case "CountryRequiredError":
+               Assert.assertTrue(createAccountForm.getCountryRequiredError().isDisplayed());
+               break;
+           case "AddressRequiredError":
+               Assert.assertTrue(createAccountForm.getAddressRequiredError().isDisplayed());
+               break;
+           case "AddressAliasRequiredError":
+               Assert.assertTrue(createAccountForm.getAddressAliasRequiredError().isDisplayed());
+               break;
+           case "CityRequiredError":
+               Assert.assertTrue(createAccountForm.getCityRequiredError().isDisplayed());
+               break;
+           case "CountryUnselectedError":
+               Assert.assertTrue(createAccountForm.getCountryUnselectedError().isDisplayed());
+          case "AssertAll":
+               Assert.assertTrue(createAccountForm.getPhoneNumberError().isDisplayed());
+               Assert.assertTrue(createAccountForm.getLastNameError().isDisplayed());
+               Assert.assertTrue(createAccountForm.getFirstNameError().isDisplayed());
+               Assert.assertTrue(createAccountForm.getEmailRequiredError().isDisplayed());
+               Assert.assertTrue(createAccountForm.getPasswordRequiredError().isDisplayed());
+               Assert.assertTrue(createAccountForm.getCountryRequiredError().isDisplayed());
+               Assert.assertTrue(createAccountForm.getAddressRequiredError().isDisplayed());
+               Assert.assertTrue(createAccountForm.getAddressAliasRequiredError().isDisplayed());
+               Assert.assertTrue(createAccountForm.getCityRequiredError().isDisplayed());
+               Assert.assertTrue(createAccountForm.getCountryUnselectedError().isDisplayed());
+               break;
+       }
+
     }
 }
