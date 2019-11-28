@@ -287,6 +287,9 @@ public class CreateAccountForm {
     public WebElement getEmailInvalidError() {
         return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \" is invalid.\")]/b[contains(text(), \"email\")]"), 30);
     }
+    public WebElement getCustomerEmailInvalidError() {
+        return Utils.waitForElementPresence(driver, By.xpath("//div[@id='center_column']//p[.='There is 1 error']"), 30);
+    }
 
     public WebElement getEmailBeenRegistered() {
         return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \"An account using this\")]"), 30);
@@ -427,11 +430,9 @@ public class CreateAccountForm {
                 setCustomerLastNameField("Daniel");
                 setCustomerEmailField("mdaniel219test@mailinator.com");
                 setCustomerPasswordField("masterPWM222*");
-
                 selectCustomerDateOfBirthDay().selectByValue("23");
                 selectCustomerDateOfBirthMonth().selectByValue("7");
                 selectCustomerDateOfBirthYear().selectByValue("1997");
-
                 setCustomerFirstNameField("Michael");
                 setCustomerLastNameField("Daniel");
                 setCompanyField("Softvision");
@@ -446,52 +447,27 @@ public class CreateAccountForm {
                 setCustomerTitleMr();
                 setAddressAliasField("My Address");
                 break;
-        }
-    }
+            case "setAllFieldsExceptTwo":
+                setCustomerFirstNameField("Michael");
+                setCustomerLastNameField("Daniel");
+                setCustomerEmailField("mdaniel219test@mailinator.com");
+                setCustomerPasswordField("masterPWM222*");
+                selectCustomerDateOfBirthDay().selectByValue("23");
+                selectCustomerDateOfBirthMonth().selectByValue("7");
+                selectCustomerDateOfBirthYear().selectByValue("1997");
+                setCustomerFirstNameField("Michael");
+                setCustomerLastNameField("Daniel");
+                setCompanyField("Softvision");
+                setAddressField("Sos. Nationala nr. 37, 00000, Softvision");
+                //setAddressFieldTwo("Cladirea Aria, et. 1, Iasi");
+                setCityField("Iasi");
+                selectState().selectByVisibleText("Alaska");
+                setPostalCodeField("70054");
+                setHomePhoneField("0337455455");
+                setMobilePhoneField("+40 777 666 555");
 
-    public void assertAccountCreateExpectedErrors(String fieldName) {
-        switch (fieldName) {
-            case "PhoneNumberError":
-                Assert.assertTrue(getPhoneNumberError().isDisplayed());
-                break;
-            case "LastNameError":
-                Assert.assertTrue(getLastNameError().isDisplayed());
-                break;
-            case "FirstNameError":
-                Assert.assertTrue(getFirstNameError().isDisplayed());
-                break;
-            case "EmailRequiredError":
-                Assert.assertTrue(getEmailRequiredError().isDisplayed());
-                break;
-            case "PasswordRequiredError":
-                Assert.assertTrue(getPasswordRequiredError().isDisplayed());
-                break;
-            case "CountryRequiredError":
-                Assert.assertTrue(getCountryRequiredError().isDisplayed());
-                break;
-            case "AddressRequiredError":
-                Assert.assertTrue(getAddressRequiredError().isDisplayed());
-                break;
-            case "AddressAliasRequiredError":
-                Assert.assertTrue(getAddressAliasRequiredError().isDisplayed());
-                break;
-            case "CityRequiredError":
-                Assert.assertTrue(getCityRequiredError().isDisplayed());
-                break;
-            case "CountryUnselectedError":
-                Assert.assertTrue(getCountryUnselectedError().isDisplayed());
-                break;
-            case "AssertAll":
-                Assert.assertTrue(getPhoneNumberError().isDisplayed());
-                Assert.assertTrue(getLastNameError().isDisplayed());
-                Assert.assertTrue(getFirstNameError().isDisplayed());
-                Assert.assertTrue(getEmailRequiredError().isDisplayed());
-                Assert.assertTrue(getPasswordRequiredError().isDisplayed());
-                Assert.assertTrue(getCountryRequiredError().isDisplayed());
-                Assert.assertTrue(getAddressRequiredError().isDisplayed());
-                Assert.assertTrue(getAddressAliasRequiredError().isDisplayed());
-                Assert.assertTrue(getCityRequiredError().isDisplayed());
-                Assert.assertTrue(getCountryUnselectedError().isDisplayed());
+                setCustomerTitleMr();
+                setAddressAliasField("My Address");
                 break;
         }
     }
@@ -556,16 +532,13 @@ public class CreateAccountForm {
                 getAddressAliasField().clear();
                 //setCustomerEmailField("");
                 selectCountry("-");
-
                 setCustomerFirstNameField("");
                 setCustomerLastNameField("");
                 setCustomerEmailField("");
                 setCustomerPasswordField("");
-
                 selectCustomerDateOfBirthDay().selectByVisibleText("-");
                 selectCustomerDateOfBirthMonth().selectByVisibleText("-");
                 selectCustomerDateOfBirthYear().selectByVisibleText("-");
-
                 getCustomerFirstNameField().clear();
                 getCustomerLastNameField().clear();
                 getCompanyField().clear();
@@ -576,6 +549,53 @@ public class CreateAccountForm {
                 selectCountry().selectByVisibleText("-");
                 getHomePhoneField().clear();
                 getMobilePhoneField().clear();
+                break;
+        }
+    }
+
+    public void assertAccountCreateExpectedErrors(String fieldName) {
+        switch (fieldName) {
+            case "PhoneNumberError":
+                Assert.assertTrue(getPhoneNumberError().isDisplayed());
+                break;
+            case "LastNameError":
+                Assert.assertTrue(getLastNameError().isDisplayed());
+                break;
+            case "FirstNameError":
+                Assert.assertTrue(getFirstNameError().isDisplayed());
+                break;
+            case "EmailRequiredError":
+                Assert.assertTrue(getEmailRequiredError().isDisplayed());
+                break;
+            case "PasswordRequiredError":
+                Assert.assertTrue(getPasswordRequiredError().isDisplayed());
+                break;
+            case "CountryRequiredError":
+                Assert.assertTrue(getCountryRequiredError().isDisplayed());
+                break;
+            case "AddressRequiredError":
+                Assert.assertTrue(getAddressRequiredError().isDisplayed());
+                break;
+            case "AddressAliasRequiredError":
+                Assert.assertTrue(getAddressAliasRequiredError().isDisplayed());
+                break;
+            case "CityRequiredError":
+                Assert.assertTrue(getCityRequiredError().isDisplayed());
+                break;
+            case "CountryUnselectedError":
+                Assert.assertTrue(getCountryUnselectedError().isDisplayed());
+                break;
+            case "AssertAll":
+                Assert.assertTrue(getPhoneNumberError().isDisplayed());
+                Assert.assertTrue(getLastNameError().isDisplayed());
+                Assert.assertTrue(getFirstNameError().isDisplayed());
+                Assert.assertTrue(getEmailRequiredError().isDisplayed());
+                Assert.assertTrue(getPasswordRequiredError().isDisplayed());
+                Assert.assertTrue(getCountryRequiredError().isDisplayed());
+                Assert.assertTrue(getAddressRequiredError().isDisplayed());
+                Assert.assertTrue(getAddressAliasRequiredError().isDisplayed());
+                Assert.assertTrue(getCityRequiredError().isDisplayed());
+                Assert.assertTrue(getCountryUnselectedError().isDisplayed());
                 break;
         }
     }
