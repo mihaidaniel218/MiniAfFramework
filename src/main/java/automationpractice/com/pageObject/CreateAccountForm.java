@@ -7,6 +7,11 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import utils.Utils;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
 public class CreateAccountForm {
 
     private static final String AccountCreationForm = "account-creation_form";
@@ -15,6 +20,27 @@ public class CreateAccountForm {
     public CreateAccountForm(WebDriver driver) {
         this.driver = driver;
     }
+
+    public static LinkedList<WebElement> content = new LinkedList<>();
+
+    ArrayList<WebElement> list=(ArrayList<WebElement>) driver.findElements(By.xpath("//li[contains(text(), \"You must register\")]/../.."));
+
+/*
+    public static LinkedList<WebElement> getContent() {
+        return content;
+    }
+
+    {
+        driver.findElement(By.id("account-creation_form")), driver.findElement(By.id("uniform-id_gender1"))
+    }
+
+    List<WebElement> allLinks = driver.findElements(By.id("//div[@class='datepicker']/div/table/tbody/tr/td/table/tbody[2]/tr/td[@class='' or @class='datepickerSaturday' or @class='datepickerSunday']/a/span"));
+    Iterator<WebElement> itr = allLinks.iterator();
+
+    while(itr.hasNext()) {
+        System.out.println(itr.next());
+    }
+*/
 
     public WebElement getAccountCreationForm() {
         return Utils.waitForElementPresence(driver, By.id("account-creation_form"), 30);
