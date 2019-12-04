@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8250031-a3e3-4737-8438-c0a48aa1c942" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Foundation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Homepage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/ShoppingActions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/SignInForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/CreateAccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/CreateAccountForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/automationpractice/com/pageObject/Cart.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +27,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
@@ -57,6 +64,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\MiniAfFramework\src\test\java\CucumberFramework\featureFiles" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="clinique.PageObject" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\MiniAfFramework\src\test\java\CucumberFramework\steps" />
     </key>
@@ -73,7 +83,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.CreateAccountFormTest">
+  <component name="RunManager" selected="TestNG.ShopWorkFlow.buyProduct">
     <configuration name="Feature: Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/CucumberFramework/featureFiles/Login.feature" />
@@ -126,53 +136,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateAccountFormTest.autenthicationPage" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ShopWorkFlow" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="automationpractice.com" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="automationpractice.com.*" />
+          <option name="PATTERN" value="clinique.na.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="automationpractice.com" />
-      <option name="MAIN_CLASS_NAME" value="automationpractice.com.CreateAccountFormTest" />
-      <option name="METHOD_NAME" value="autenthicationPage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateAccountFormTest.requiredFieldsEmpty" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="automationpractice.com" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="automationpractice.com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="automationpractice.com" />
-      <option name="MAIN_CLASS_NAME" value="automationpractice.com.CreateAccountFormTest" />
-      <option name="METHOD_NAME" value="requiredFieldsEmpty" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShopWorkflowTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="automationpractice.com" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="automationpractice.com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="automationpractice.com" />
-      <option name="MAIN_CLASS_NAME" value="automationpractice.com.ShopWorkflowTest" />
+      <option name="PACKAGE_NAME" value="clinique.na" />
+      <option name="MAIN_CLASS_NAME" value="clinique.na.ShopWorkFlow" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopWorkFlow.buyProduct (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="automationpractice.com" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="clinique.na.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="clinique.na" />
+      <option name="MAIN_CLASS_NAME" value="clinique.na.ShopWorkFlow" />
+      <option name="METHOD_NAME" value="buyProduct" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="0" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopWorkFlow.buyProduct" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="automationpractice.com" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="clinique.na.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="clinique.na" />
+      <option name="MAIN_CLASS_NAME" value="clinique.na.ShopWorkFlow" />
+      <option name="METHOD_NAME" value="buyProduct" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -222,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ShopWorkFlow.buyProduct" />
+        <item itemvalue="TestNG.ShopWorkFlow" />
+        <item itemvalue="TestNG.ShopWorkFlow.buyProduct (1)" />
         <item itemvalue="TestNG.CreateAccountFormTest" />
         <item itemvalue="Cucumber java.Feature: Login" />
-        <item itemvalue="TestNG.CreateAccountFormTest.requiredFieldsEmpty" />
-        <item itemvalue="TestNG.CreateAccountFormTest.autenthicationPage" />
-        <item itemvalue="TestNG.ShopWorkflowTest" />
       </list>
     </recent_temporary>
   </component>
@@ -296,5 +307,26 @@
     <MESSAGE value="Updated feature steps and tests" />
     <MESSAGE value="Updated select clothes test" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated select clothes test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
