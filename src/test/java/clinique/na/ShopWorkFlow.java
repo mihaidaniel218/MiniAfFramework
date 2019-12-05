@@ -37,7 +37,6 @@ public class ShopWorkFlow {
 
         action = new Actions(driver);
 
-
         homepage = new clinique.PageObject.Homepage(driver);
         cart = new clinique.PageObject.Cart(driver);
         signinForm = new clinique.PageObject.SignInForm(driver);
@@ -57,7 +56,6 @@ public class ShopWorkFlow {
         driver.findElement(By.id("password")).sendKeys("5upuq%ic");
         driver.switchTo().alert().accept();
         driver.switchTo().defaultContent();
-        driver.get("https://e.clinique.na.us.stage.ncsa.elcdev.net/account/index.tmpl");
     }
 
     @AfterClass
