@@ -101,18 +101,21 @@ public class ShopWorkFlow {
         Assert.assertTrue(foundation.getNewProduct().isDisplayed());
         Thread.sleep(1500);
         //action.moveToElement(foundation.getNewProduct()).perform();
-        Thread.sleep(6000);
         action.click(foundation.getNewProduct()).build().perform();
-        Thread.sleep(2500);
+        Thread.sleep(3500);
+        driver.findElement(By.xpath("//img[@alt='Close chat']")).click();
+        Thread.sleep(3500);
+        driver.findElement(By.xpath("//img[@alt='Close chat']")).click();
+        Thread.sleep(3500);
         action.click(foundation.getAddToBagBtn()).perform();
         Thread.sleep(2500);
-
         action.click(cart.getCheckoutBtn()).perform();
         Thread.sleep(1500);
         action.click(cart.getCheckoutBtn()).build().perform();
+        //driver.findElement(By.partialLinkText("Checkout")).click();
         Thread.sleep(1500);
-        driver.findElement(By.xpath("//img[@alt='Close chat']")).click();
         Assert.assertTrue(cart.getProductsInCart().isDisplayed());
+
         Assert.assertTrue(cart.getQuantityOfProductsInCart().isDisplayed());
 
         action.click(cart.geRemoveProductsFromCart()).perform();

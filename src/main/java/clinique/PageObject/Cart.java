@@ -17,8 +17,13 @@ public class Cart {
         this.driver = driver;
     }
 
+    public WebElement getBagIconBtn() {
+        return Utils.waitForElementPresence(driver, By.xpath("//*[@class='header-gnav-cart__icon svgicon svgicon--bag hide_auth']"), 30);
+    }
+
     public WebElement getCheckoutBtn() {
-        return Utils.waitForElementPresence(driver, By.linkText("Checkout"), 30);
+        return Utils.waitForElementPresence(driver, By.xpath("//*[@id='node-249802']/div/div/div/div[2]/div[2]/div/div/span/div[3]/div[3]/a"), 30);
+        //html//nav[@id='header-gnav-navigation']/div[@class='header-gnav__wrapper']/div/div[@class='content']/div[@role='article']/div[@class='content']/div[@class='field-elc-nodeblock-content']/div[@class='gnav-header-formatter js-gnav-header-formatter-v1']/div[@class='gnav-header-formatter__wrapper']//div[@class='gnav-header-formatter__bag']/div/div[@class='content']/div[@role='article']//div[@class='header-gnav-cart js-header-gnav-cart-v1']//div[@class='cart-confirm-wrapper']/span/div[3]/div[@class='right-copy']/a[@href='/checkout/viewcart.tmpl']
         //*[@id="node-249802"]/div/div/div/div[2]/div[2]/div/div/span/div[3]/div[3]/a
         //*[@id="node-249802"]/div/div/div/div[2]/div[2]/div/div/span/div[3]/div[3]/a
 
