@@ -44,18 +44,20 @@ public class ShopWorkFlow {
 
         String baseUrl = "https://e.clinique.na.us.stage.ncsa.elcdev.net/account/index.tmpl";
         driver.manage().window().maximize();
-        driver.get(baseUrl);
-        action.sendKeys(Keys.ESCAPE).build().perform();
-        action.sendKeys(Keys.ESCAPE).build().perform();
-        driver.switchTo().alert();
+        driver.navigate().to(baseUrl);
+        action.sendKeys("clinique").build().perform();
+        action.sendKeys(Keys.TAB).build().perform();
+        action.sendKeys("5upuq%ic").build().perform();
+        action.sendKeys(Keys.ENTER).build().perform();
+
 
         //https://e.clinique.na.us.stage.ncsa.elcdev.net/account/index.tmpl
 //Selenium-WebDriver Java Code for entering Username & Password as below:
-
+        /*driver.switchTo().alert();
         driver.findElement(By.id("userID")).sendKeys("clinique");
         driver.findElement(By.id("password")).sendKeys("5upuq%ic");
         driver.switchTo().alert().accept();
-        driver.switchTo().defaultContent();
+        driver.switchTo().defaultContent();*/
     }
 
     @AfterClass
