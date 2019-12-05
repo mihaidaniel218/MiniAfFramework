@@ -46,6 +46,18 @@ public class ShopWorkFlow {
         String baseUrl = "https://e.clinique.na.us.stage.ncsa.elcdev.net/account/index.tmpl";
         driver.manage().window().maximize();
         driver.get(baseUrl);
+        action.sendKeys(Keys.ESCAPE).build().perform();
+        action.sendKeys(Keys.ESCAPE).build().perform();
+        driver.switchTo().alert();
+
+        //https://e.clinique.na.us.stage.ncsa.elcdev.net/account/index.tmpl
+//Selenium-WebDriver Java Code for entering Username & Password as below:
+
+        driver.findElement(By.id("userID")).sendKeys("clinique");
+        driver.findElement(By.id("password")).sendKeys("5upuq%ic");
+        driver.switchTo().alert().accept();
+        driver.switchTo().defaultContent();
+        driver.get("https://e.clinique.na.us.stage.ncsa.elcdev.net/account/index.tmpl");
     }
 
     @AfterClass
@@ -97,24 +109,42 @@ public class ShopWorkFlow {
         //action.moveToElement(foundation.getNewProduct()).perform();
         action.click(foundation.getNewProduct()).build().perform();
         Thread.sleep(3500);
-        driver.findElement(By.xpath("//img[@alt='Close chat']")).click();
-        //action.click(cart.getChatPopup()).build().perform();
-        Thread.sleep(3500);
-        driver.findElement(By.xpath("//img[@alt='Close chat']")).click();
+        action.click(foundation.getProductShade()).build().perform();
+        Thread.sleep(2500);
+        action.click(foundation.getShadeLevel5()).build().perform();
+        Thread.sleep(2500);
+/*        action.click(foundation.getAddToBagShadeBtn()).build().perform();
+        Thread.sleep(3500);*/
+        if(driver.findElement(By.xpath("//img[@alt='Close chat']")).isDisplayed()) {
+            driver.findElement(By.xpath("//img[@alt='Close chat']")).click();
+        }
+        //driver.findElement(By.xpath("//div[@id='content']/div/div/div/div/div/div/div/div/div")).click();
+        //action.click(foundation.getClickOutOfShadeMenu()).build().perform();
+/*        if(driver.findElement(By.xpath("//img[@alt='Close chat']")).isDisplayed()) {
+            driver.findElement(By.xpath("//img[@alt='Close chat']")).click();
+        }*/
         //action.click(cart.getChatPopup()).build().perform();
         Thread.sleep(3500);
         action.click(foundation.getAddToBagBtn()).perform();
         Thread.sleep(2500);
-        action.click(cart.getCheckoutBtn()).perform();
-        Thread.sleep(1500);
-        action.click(cart.getCheckoutBtn()).build().perform();
-        driver.findElement(By.className("button btn-primary")).click();
+        //action.click(cart.getCheckoutBtn()).perform();
+        //Thread.sleep(1500);
+        //action.click(cart.getCheckoutBtn()).build().perform();
+        //driver.findElement(By.className("button btn-primary")).click();
         //driver.findElement(By.linkText("Checkout")).click();
+        driver.findElement(By.cssSelector(".btn-primary")).click();
+        //driver.findElement(By.partialLinkText("Checko")).click();
         Thread.sleep(1500);
         Assert.assertTrue(cart.getProductsInCart().isDisplayed());
 
-        Assert.assertTrue(cart.getQuantityOfProductsInCart().isDisplayed());
-
+        action.click(cart.getBagIconBtn()).build().perform();
+        Thread.sleep(1500);
+        Assert.assertEquals(cart.getQuantityOfProductsInCart().getText(), "1");
+        Thread.sleep(1500);
+        Assert.assertEquals(cart.getProductNameInCart().getText(), cart.getProductsInCart().getText());
+        Thread.sleep(1500);
+        action.click(cart.getCloseCartModal()).build().perform();
+        Thread.sleep(1500);
         action.click(cart.getRemoveProductsFromCart()).perform();
         Thread.sleep(1500);
         action.click(cart.getRemoveProductsFromCart()).build().perform();

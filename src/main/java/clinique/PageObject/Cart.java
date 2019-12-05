@@ -39,8 +39,10 @@ public class Cart {
 
     public WebElement getProductNameInCart() {
         return Utils.waitForElementPresence(driver, By.xpath("//*[@id='node-249802']/div/div/div/div[2]/div[2]/div/div/div[2]/div/div/h3/a"), 30);
+        //*[@id="node-249802"]/div/div/div/div[2]/div[2]/div/div/span/div[1]/div[1]
         //*[@id="node-249802"]/div/div/div/div[2]/div[2]/div/div/div[2]/div/div/h3/a
         //div[@class='prod clearfix prod-PROD5276SKU31799']
+        //*[@id="node-249802"]/div/div/div/div[2]/div[2]/div/div/div[2]/div/div/h3/a
 
     }
 
@@ -53,12 +55,17 @@ public class Cart {
     }
 
     public WebElement getProductsInCart() {
-        return Utils.waitForElementPresence(driver, By.xpath("//a[contains(text(),'Light Reflecting Makeup Broad Sp')]"), 30);
+        return Utils.waitForElementPresence(driver, By.xpath("//a[contains(text(),'Almost Powder Makeup Broad Spectrum SPF 18')]"), 30);
     }
 
     public WebElement getQuantityOfProductsInCart() {
-        return Utils.waitForElementPresence(driver, By.xpath("//select[@id='qty_83760']//option[contains(text(),'2')]"), 30);
+        return Utils.waitForElementPresence(driver, By.xpath("//*[@id='node-249802']/div/div/div/div[2]/div[2]/div/div/div[2]/div/div/div/div[2]/span"), 30);
     }
+
+
+    //*[@id="node-249802"]/div/div/div/div[2]/div[2]/div/div/span/div[1]/div[1]/span[1]
+
+
 
     public WebElement getRemoveProductsFromCart() {
         return Utils.waitForElementPresence(driver, By.xpath("//a[@id='remove_83760']"), 30);
@@ -66,6 +73,10 @@ public class Cart {
 
     public WebElement getChatPopup() {
         return Utils.waitForElementPresence(driver, By.xpath("//img[@alt='Close chat']"), 30);
+    }
+
+    public WebElement getCloseCartModal() {
+        return Utils.waitForElementPresence(driver, By.cssSelector("[class='svgicon svgicon--x-16 hide_auth gnav-header-formatter__close-icon js-header-gnav-cart__close']"), 30);
     }
     // Viewcart Page
 

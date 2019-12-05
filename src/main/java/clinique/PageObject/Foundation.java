@@ -51,16 +51,28 @@ public class Foundation {
         //*[@id="content"]/div/div/div/div[1]/div/div/div[2]/div[1]/div[2]/div[6]/div/div/div[2]/div/div/div/button
     }
 
-/*    public WebElement getCheckoutBtn() {
-        return Utils.waitForElementPresence(driver, By.xpath("//div[@safeclass~'\bMQttm\b.*\beMxyAv\b.*\belLGxx\b.*\belc-grid-column\b.*\belc-right-sticky-column\b.*\bjs-grid-column\b.*\bjs-right-sticky-column\b.*\bsc-eNQAEJ\b']//div[@safeclass~'\belc-service-view-renderer\b']/?/?/button[@innertext='Add To Bag']"), 30);
+public WebElement getProductShade() {
+        return Utils.waitForElementPresence(driver, By.cssSelector(".ProductShadesSidebarButton__StyledSquareIcon-pxsl7q-1.hVRVvH"), 30);
     }
 
-    public WebElement getEditCartBtn() {
-        return Utils.waitForElementPresence(driver, By.xpath("/html//nav[@id='header-gnav-navigation']/div[@class='header-gnav__wrapper']/div/div[@class='content']/div[@role='article']/div[@class='content']/div[@class='field-elc-nodeblock-content']/div[@class='gnav-header-formatter js-gnav-header-formatter-v1']/div[@class='gnav-header-formatter__wrapper']/div[@class='gnav-header-formatter__gnav']//div[@class='gnav-header-formatter__bag']/div/div[@class='content']/div[@role='article']//div[@class='header-gnav-cart js-header-gnav-cart-v1']//span[@class='cart-confirm-wrapper__bottom-section']/div[3]/div[@class='left-copy']/a[@href='/checkout/viewcart.tmpl']"), 30);
+    public WebElement getShadeLevel4() {
+        return Utils.waitForElementPresence(driver, By.cssSelector("[class] [class] [color='\\#DCB286']:nth-child(3)"), 30);
     }
 
-    public WebElement getAddToBagBtn() {
-        return Utils.waitForElementPresence(driver, By.xpath("/html//nav[@id='header-gnav-navigation']/div[@class='header-gnav__wrapper']/div/div[@class='content']/div[@role='article']/div[@class='content']/div[@class='field-elc-nodeblock-content']/div[@class='gnav-header-formatter js-gnav-header-formatter-v1']/div[@class='gnav-header-formatter__wrapper']/div[@class='gnav-header-formatter__gnav']//div[@class='gnav-header-formatter__bag']/div/div[@class='content']/div[@role='article']//div[@class='header-gnav-cart js-header-gnav-cart-v1']//span[@class='cart-confirm-wrapper__bottom-section']/div[3]/div[@class='right-copy']/a[@href='/checkout/viewcart.tmpl']"), 30);
-    }*/
+    public WebElement getShadeLevel5() {
+        return Utils.waitForElementPresence(driver, By.cssSelector("[class] [class] [color='\\#D5A179']:nth-child(2)"), 30);
+    }
+
+    public WebElement getShadeLevel6() {
+        return Utils.waitForElementPresence(driver, By.cssSelector("[class] [class] [color='\\#D7AA8E']:nth-child(2)"), 30);
+    }
+
+    public WebElement getAddToBagShadeBtn() {
+        return Utils.waitForElementPresence(driver, By.cssSelector("[class='ProductShadesSidebarContent__StyledAddToBagButton-u5w55u-13 iTPdRG ProductFullAddToBagButton__Wrapper-injdp6-0 NppMt'] [data-test-id]"), 30);
+    }
+
+    public WebElement getClickOutOfShadeMenu() {
+        return Utils.waitForElementPresence(driver, By.xpath("//div[@id='content']/div/div/div/div/div/div/div/div/div"), 30);
+    }
 
 }

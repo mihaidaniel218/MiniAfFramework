@@ -4,6 +4,7 @@
     <list default="true" id="e8250031-a3e3-4737-8438-c0a48aa1c942" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Foundation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Foundation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,25 +79,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ShopWorkFlow.buyProduct">
-    <configuration name="Feature: Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/CucumberFramework/featureFiles/Login.feature" />
-      <option name="GLUE" value="CucumberFramework.steps" />
-      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
-      <module name="automationpractice.com" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
-      <option name="SUGGESTED_NAME" value="Feature: Login" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.ShopWorkFlow.loginUser">
     <configuration name="TestRunner" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="automationpractice.com" />
       <extension name="coverage">
@@ -185,6 +168,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShopWorkFlow.loginUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="automationpractice.com" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="clinique.na.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="clinique.na" />
+      <option name="MAIN_CLASS_NAME" value="clinique.na.ShopWorkFlow" />
+      <option name="METHOD_NAME" value="loginUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Login.feature" type="substepsFeature" factoryName="Substeps Feature" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="" />
       <option name="allowRunningInParallel" value="false" />
@@ -228,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ShopWorkFlow.loginUser" />
         <item itemvalue="TestNG.ShopWorkFlow.buyProduct" />
         <item itemvalue="TestNG.ShopWorkFlow" />
         <item itemvalue="TestNG.ShopWorkFlow.buyProduct (1)" />
         <item itemvalue="TestNG.CreateAccountFormTest" />
-        <item itemvalue="Cucumber java.Feature: Login" />
       </list>
     </recent_temporary>
   </component>
@@ -308,18 +309,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="25" />
+          <line>143</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="26" />
+          <line>141</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="27" />
+          <line>147</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
