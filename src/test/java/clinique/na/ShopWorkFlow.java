@@ -1,11 +1,8 @@
 package clinique.na;
 
-import automationpractice.com.pageObject.Account;
-import clinique.PageObject.ShoppingActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -14,8 +11,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import clinique.PageObject.Cart;
-import automationpractice.com.pageObject.CartSummary;
-import automationpractice.com.pageObject.Clothes;
 import clinique.PageObject.Foundation;
 import clinique.PageObject.SignInForm;
 import clinique.PageObject.Homepage;
@@ -31,7 +26,6 @@ public class ShopWorkFlow {
 
     private Cart cart;
     private Foundation foundation;
-    private CartSummary summary;
     private SignInForm signinForm;
     private Homepage homepage;
 
@@ -104,23 +98,26 @@ public class ShopWorkFlow {
         action.click(foundation.getNewProduct()).build().perform();
         Thread.sleep(3500);
         driver.findElement(By.xpath("//img[@alt='Close chat']")).click();
+        //action.click(cart.getChatPopup()).build().perform();
         Thread.sleep(3500);
         driver.findElement(By.xpath("//img[@alt='Close chat']")).click();
+        //action.click(cart.getChatPopup()).build().perform();
         Thread.sleep(3500);
         action.click(foundation.getAddToBagBtn()).perform();
         Thread.sleep(2500);
         action.click(cart.getCheckoutBtn()).perform();
         Thread.sleep(1500);
         action.click(cart.getCheckoutBtn()).build().perform();
-        //driver.findElement(By.partialLinkText("Checkout")).click();
+        driver.findElement(By.className("button btn-primary")).click();
+        //driver.findElement(By.linkText("Checkout")).click();
         Thread.sleep(1500);
         Assert.assertTrue(cart.getProductsInCart().isDisplayed());
 
         Assert.assertTrue(cart.getQuantityOfProductsInCart().isDisplayed());
 
-        action.click(cart.geRemoveProductsFromCart()).perform();
+        action.click(cart.getRemoveProductsFromCart()).perform();
         Thread.sleep(1500);
-        action.click(cart.geRemoveProductsFromCart()).build().perform();
+        action.click(cart.getRemoveProductsFromCart()).build().perform();
         Thread.sleep(1500);
 /*        action.click(homepage.getFoundationTabBtn()).build().perform();
         Thread.sleep(1500);

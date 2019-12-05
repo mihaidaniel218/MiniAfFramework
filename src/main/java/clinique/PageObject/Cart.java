@@ -60,10 +60,13 @@ public class Cart {
         return Utils.waitForElementPresence(driver, By.xpath("//select[@id='qty_83760']//option[contains(text(),'2')]"), 30);
     }
 
-    public WebElement geRemoveProductsFromCart() {
+    public WebElement getRemoveProductsFromCart() {
         return Utils.waitForElementPresence(driver, By.xpath("//a[@id='remove_83760']"), 30);
     }
 
+    public WebElement getChatPopup() {
+        return Utils.waitForElementPresence(driver, By.xpath("//img[@alt='Close chat']"), 30);
+    }
     // Viewcart Page
 
 

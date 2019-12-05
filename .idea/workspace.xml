@@ -308,13 +308,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>113</line>
-          <option name="timeStamp" value="22" />
+          <line>107</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
           <line>111</line>
-          <option name="timeStamp" value="25" />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
