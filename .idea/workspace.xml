@@ -228,8 +228,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.ShopWorkFlow.buyProduct" />
-        <item itemvalue="TestNG.ShopWorkFlow.loginUser" />
         <item itemvalue="TestNG.ShopWorkFlow" />
+        <item itemvalue="TestNG.ShopWorkFlow.loginUser" />
         <item itemvalue="TestNG.ShopWorkFlow.buyProduct (1)" />
         <item itemvalue="TestNG.CreateAccountFormTest" />
       </list>
@@ -307,28 +307,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>143</line>
+          <line>155</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>141</line>
+          <line>153</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>147</line>
+          <line>159</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>145</line>
+          <line>157</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>46</line>
+          <line>48</line>
           <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
