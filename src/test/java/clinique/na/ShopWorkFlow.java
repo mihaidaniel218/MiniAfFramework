@@ -35,7 +35,7 @@ public class ShopWorkFlow {
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
         action = new Actions(driver);
 
@@ -77,7 +77,7 @@ public class ShopWorkFlow {
         action.sendKeys(Keys.ESCAPE).build().perform();
         Thread.sleep(1500);
         signinForm.setEmailField("mdaniel219test@mailinator.com");
-        signinForm.setPasswordField("cliniqueClient20");
+        signinForm.setPasswordField("cliniqueCL22");
         action.sendKeys(Keys.ESCAPE).build().perform();
         action.click(signinForm.getSignInTermsAnsConditionsBtn()).build();
         Thread.sleep(1500);
@@ -88,7 +88,9 @@ public class ShopWorkFlow {
         action.click(signinForm.getJoinNowBtn()).build().perform();
         Thread.sleep(1500);
         if(signinForm.getAccountExistsWarning().isDisplayed()) {
-            signinForm.setReturnPasswordField("cliniqueClient20");
+            Thread.sleep(500);
+            signinForm.setReturnPasswordField("cliniqueCL22");
+            Thread.sleep(500);
             action.click(signinForm.getReturnSignInBtn()).build();
             Thread.sleep(1500);
             action.click(signinForm.getReturnSignInBtn()).build().perform();
@@ -97,42 +99,35 @@ public class ShopWorkFlow {
 
     @Test(priority = 2)
     public void buyProduct() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver,30);
-        //Thread.sleep(3500);
+        WebDriverWait wait = new WebDriverWait(driver,50);
+
         action.sendKeys(Keys.ESCAPE).build().perform();
         Assert.assertTrue(homepage.getFoundationTabBtn().isDisplayed());
         action.moveToElement(homepage.getFoundationTabBtn()).perform();
-        //Thread.sleep(3500);
+
         wait.until(ExpectedConditions.elementToBeClickable(homepage.getFoundationTabBtn()));
         action.click(homepage.getFoundationTabBtn()).build().perform();
-        //Thread.sleep(1500);
+        wait.until(ExpectedConditions.elementToBeClickable(foundation.getCloseCliniqueSmartRewards()));
+        action.click(foundation.getCloseCliniqueSmartRewards()).build().perform();
+
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getFoundationsBanner()));
         Assert.assertTrue(foundation.getFoundationsBanner().isDisplayed());
-        //Thread.sleep(1500);
+
         wait.until(ExpectedConditions.visibilityOf(foundation.getNewProduct()));
         Assert.assertTrue(foundation.getNewProduct().isDisplayed());
-        //Thread.sleep(1500);
-        //action.moveToElement(foundation.getNewProduct()).perform();
+
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getNewProduct()));
         action.click(foundation.getNewProduct()).build().perform();
-        //Thread.sleep(3500);
+
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getProductShade()));
         action.click(foundation.getProductShade()).build().perform();
-        //Thread.sleep(2500);
+
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getShadeLevel5()));
         action.click(foundation.getShadeLevel5()).build().perform();
-        //Thread.sleep(2500);
-/*        action.click(foundation.getAddToBagShadeBtn()).build().perform();
-        Thread.sleep(3500);*/
-        if(driver.findElement(By.xpath("//img[@alt='Close chat']")).isDisplayed()) {
-            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Close chat']")));
-            driver.findElement(By.xpath("//img[@alt='Close chat']")).click();
-        }
-        //driver.findElement(By.xpath("//div[@id='content']/div/div/div/div/div/div/div/div/div")).click();
-        //action.click(foundation.getClickOutOfShadeMenu()).build().perform();
-/*        if(driver.findElement(By.xpath("//img[@alt='Close chat']")).isDisplayed()) {
-            driver.findElement(By.xpath("//img[@alt='Close chat']")).click();
-        }*/
+
+        wait.until(ExpectedConditions.elementToBeClickable(foundation.getAddToBagShadeBtn()));
+        action.click(foundation.getAddToBagShadeBtn()).build().perform();
+        //Thread.sleep(3500);
         //action.click(cart.getChatPopup()).build().perform();
         //Thread.sleep(3500);
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getAddToBagBtn()));
@@ -141,25 +136,27 @@ public class ShopWorkFlow {
         //action.click(cart.getCheckoutBtn()).perform();
         //Thread.sleep(1500);
         //action.click(cart.getCheckoutBtn()).build().perform();
-        //driver.findElement(By.className("button btn-primary")).click();
-        //driver.findElement(By.linkText("Checkout")).click();
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn-primary")));
+        Thread.sleep(3000);
         driver.findElement(By.cssSelector(".btn-primary")).click();
-        //driver.findElement(By.partialLinkText("Checko")).click();
+
         //Thread.sleep(1500);
+        wait.until(ExpectedConditions.visibilityOf(cart.getProductsInCart()));
         Assert.assertTrue(cart.getProductsInCart().isDisplayed());
         wait.until(ExpectedConditions.elementToBeClickable(cart.getBagIconBtn()));
         action.click(cart.getBagIconBtn()).build().perform();
+        Thread.sleep(1500);
+        Assert.assertEquals(cart.getQuantityOfProductsInCart().getText(), cart.getNumberOfProductsInCart().getText());
         //Thread.sleep(1500);
-        Assert.assertEquals(cart.getQuantityOfProductsInCart().getText(), "1");
-        //Thread.sleep(1500);
-        Assert.assertEquals(cart.getProductNameInCart().getText(), cart.getProductsInCart().getText());
-        //Thread.sleep(1500);
-        action.click(cart.getCloseCartModal()).build().perform();
+
+        Thread.sleep(1500);
+        //wait.until(ExpectedConditions.elementToBeClickable(cart.getCloseCartModal()));
+        //action.click(cart.getCloseCartModal()).build().perform();
+        driver.findElement(By.cssSelector(".js-header-gnav-cart__close")).click();
         //Thread.sleep(1500);
         action.click(cart.getRemoveProductsFromCart()).perform();
         //Thread.sleep(1500);
-        action.click(cart.getRemoveProductsFromCart()).build().perform();
+        //action.click(cart.getRemoveProductsFromCart()).build().perform();
         //Thread.sleep(1500);
 /*        action.click(homepage.getFoundationTabBtn()).build().perform();
         Thread.sleep(1500);

@@ -75,4 +75,7 @@ public WebElement getProductShade() {
         return Utils.waitForElementPresence(driver, By.xpath("//div[@id='content']/div/div/div/div/div/div/div/div/div"), 30);
     }
 
+    public WebElement getCloseCliniqueSmartRewards() {
+        return Utils.waitForElementPresence(driver, By.xpath("//*[@id='foreground-node']/div[1]/a"), 30);
+    }
 }

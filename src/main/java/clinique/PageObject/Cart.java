@@ -61,14 +61,17 @@ public class Cart {
     public WebElement getQuantityOfProductsInCart() {
         return Utils.waitForElementPresence(driver, By.xpath("//*[@id='node-249802']/div/div/div/div[2]/div[2]/div/div/div[2]/div/div/div/div[2]/span"), 30);
     }
+    public WebElement getNumberOfProductsInCart() {
+    return Utils.waitForElementPresence(driver, By.xpath("//*[@id='node-249802']/div/div/div/div[2]/div[2]/div/div/span/div[1]/div[1]/span[1]"),30);
+    }
 
 
     //*[@id="node-249802"]/div/div/div/div[2]/div[2]/div/div/span/div[1]/div[1]/span[1]
-
+    //*[@id="node-249802"]/div/div/div/div[2]/div[2]/div/div/div[2]/div/div/div/div[2]/span
 
 
     public WebElement getRemoveProductsFromCart() {
-        return Utils.waitForElementPresence(driver, By.xpath("//a[@id='remove_83760']"), 30);
+        return Utils.waitForElementPresence(driver, By.id("remove_97124"), 30);
     }
 
     public WebElement getChatPopup() {
@@ -76,8 +79,11 @@ public class Cart {
     }
 
     public WebElement getCloseCartModal() {
-        return Utils.waitForElementPresence(driver, By.cssSelector("[class='svgicon svgicon--x-16 hide_auth gnav-header-formatter__close-icon js-header-gnav-cart__close']"), 30);
+        return Utils.waitForElementPresence(driver, By.cssSelector(".js-header-gnav-cart__close"), 30);
     }
+    //*[@id="x-16"]/path
+    //*[@id="node-249802"]/div/div/div/div[2]/div[1]/sv
+    //*[@id='node-249802']/div/div/div/div[2]/div[1]/svg
     // Viewcart Page
 
 
