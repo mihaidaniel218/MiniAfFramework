@@ -3,6 +3,7 @@ package clinique.na;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -96,7 +97,6 @@ public class ShopWorkFlow {
             action.click(signinForm.getReturnSignInBtn()).build().perform();
         }
     }
-
     @Test(priority = 2)
     public void buyProduct() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver,50);
@@ -109,38 +109,55 @@ public class ShopWorkFlow {
         action.click(homepage.getFoundationTabBtn()).build().perform();
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getCloseCliniqueSmartRewards()));
         action.click(foundation.getCloseCliniqueSmartRewards()).build().perform();
-
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getFoundationsBanner()));
-        Assert.assertTrue(foundation.getFoundationsBanner().isDisplayed());
 
+        Assert.assertTrue(foundation.getFoundationsBanner().isDisplayed());
         wait.until(ExpectedConditions.visibilityOf(foundation.getNewProduct()));
         Assert.assertTrue(foundation.getNewProduct().isDisplayed());
 
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getNewProduct()));
         action.click(foundation.getNewProduct()).build().perform();
-
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getProductShade()));
         action.click(foundation.getProductShade()).build().perform();
-
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getShadeLevel5()));
         action.click(foundation.getShadeLevel5()).build().perform();
-
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getAddToBagShadeBtn()));
         action.click(foundation.getAddToBagShadeBtn()).build().perform();
-        //Thread.sleep(3500);
-        //action.click(cart.getChatPopup()).build().perform();
-        //Thread.sleep(3500);
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getAddToBagBtn()));
         action.click(foundation.getAddToBagBtn()).perform();
-        //Thread.sleep(2500);
-        //action.click(cart.getCheckoutBtn()).perform();
-        //Thread.sleep(1500);
-        //action.click(cart.getCheckoutBtn()).build().perform();
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn-primary")));
-        Thread.sleep(3000);
-        driver.findElement(By.cssSelector(".btn-primary")).click();
 
-        //Thread.sleep(1500);
+/*        if(driver.findElement(By.cssSelector(".lpc_maximized-header__close-button-asset")).isDisplayed()) {
+            driver.findElement(By.cssSelector(".lpc_maximized-header__close-button-asset")).click();
+        };
+
+        if(driver.findElement(By.cssSelector(".lp_close_survey_button.lpc_desktop.lpc_survey-area__close-button")).isDisplayed()) {
+            driver.findElement(By.cssSelector(".lp_close_survey_button.lpc_desktop.lpc_survey-area__close-button")).click();
+        };*/
+/*        System.out.println(driver.switchTo().alert().getText());
+        driver.switchTo().alert().dismiss();*/
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn-primary")));
+        Thread.sleep(3500);
+
+        try{
+            WebElement element = driver.findElement(By.cssSelector(".lpc_maximized-header__close-button-asset"));
+            if(isDisplayed(element) && isEnabled(element)){
+                element.click(); // here i want if  element.click(); command
+            }
+            element = driver.findElement(By.cssSelector(".lp_close_survey_button.lpc_desktop.lpc_survey-area__close-button"));
+            if(isDisplayed(element) && isEnabled(element)){
+                element.click(); // here i want if  element.click(); command
+            }
+        }
+        catch(Exception e){
+            System.out.print(e.getMessage());
+        }
+
+
+
+        Thread.sleep(2500);
+        driver.findElement(By.cssSelector(".btn-primary")).click();
+        Thread.sleep(3500);
+
         wait.until(ExpectedConditions.visibilityOf(cart.getProductsInCart()));
         Assert.assertTrue(cart.getProductsInCart().isDisplayed());
         wait.until(ExpectedConditions.elementToBeClickable(cart.getBagIconBtn()));
@@ -158,9 +175,25 @@ public class ShopWorkFlow {
         //Thread.sleep(1500);
         //action.click(cart.getRemoveProductsFromCart()).build().perform();
         //Thread.sleep(1500);
-/*        action.click(homepage.getFoundationTabBtn()).build().perform();
+        action.click(homepage.getFoundationTabBtn()).perform();
         Thread.sleep(1500);
-        Assert.assertTrue(homepage.getFoundationTabBtn().isDisplayed());*/
+        Assert.assertTrue(homepage.getFoundationTabBtn().isDisplayed());
 
     }
+
+    private boolean isDisplayed(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    private boolean isEnabled(WebElement element) {
+        try {
+            return element.isEnabled();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 }

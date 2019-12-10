@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e8250031-a3e3-4737-8438-c0a48aa1c942" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Foundation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Foundation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/clinique/PageObject/Foundation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/clinique/PageObject/Foundation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/clinique/na/ShopWorkFlow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/clinique/na/ShopWorkFlow.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -231,9 +229,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.ShopWorkFlow" />
+        <item itemvalue="TestNG.ShopWorkFlow.buyProduct (1)" />
         <item itemvalue="TestNG.ShopWorkFlow.buyProduct" />
         <item itemvalue="TestNG.ShopWorkFlow.loginUser" />
-        <item itemvalue="TestNG.ShopWorkFlow.buyProduct (1)" />
         <item itemvalue="TestNG.CreateAccountFormTest" />
       </list>
     </recent_temporary>
@@ -310,18 +308,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>158</line>
-          <option name="timeStamp" value="45" />
+          <line>128</line>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>154</line>
-          <option name="timeStamp" value="61" />
+          <line>132</line>
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>140</line>
-          <option name="timeStamp" value="62" />
+          <line>157</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
