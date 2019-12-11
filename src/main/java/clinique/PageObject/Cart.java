@@ -13,6 +13,20 @@ import static org.apache.commons.collections.CollectionUtils.size;
 public class Cart {
     private WebDriver driver;
 
+    By toClose = By.xpath("//*[@id='lpChat']/div[2]/div[1]/div/div[3]/button[3]");
+
+    public By toCloseBtn(){
+        return toClose;
+    }
+
+    public boolean checkToCloseButton(){
+        return driver.findElement(toClose).isDisplayed();
+    }
+
+    public void clickToCloseButton(){
+        driver.findElement(toClose).click();
+    }
+
     public Cart(WebDriver driver) {
         this.driver = driver;
     }

@@ -127,24 +127,19 @@ public class ShopWorkFlow {
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getAddToBagBtn()));
         action.click(foundation.getAddToBagBtn()).perform();
 
-/*        System.out.println(driver.switchTo().alert().getText());
-        driver.switchTo().alert().dismiss();*/
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn-primary")));
         Thread.sleep(2000);
+        Cart cart2 = new Cart(driver);
 
-        try{
-           WebElement element = driver.findElement(By.xpath("//*[@id='lpChat']/div[2]/div[1]/div/div[3]/button[3]"));
-            if(isDisplayed(element) && isEnabled(element)){
-                element.click(); // here i want if  element.click(); command
-            }
-        }
-        catch(Exception e){
+        try {
+            if (cart2.checkToCloseButton())
+                cart2.clickToCloseButton();
+        } catch (Exception e) {
             System.out.print(e.getMessage());
         }
 
         Thread.sleep(1500);
         driver.findElement(By.cssSelector(".btn-primary")).click();
-        //Thread.sleep(3500);
 
         wait.until(ExpectedConditions.visibilityOf(cart.getProductsInCart()));
         Assert.assertTrue(cart.getProductsInCart().isDisplayed());
@@ -160,13 +155,12 @@ public class ShopWorkFlow {
         driver.findElement(By.cssSelector(".js-header-gnav-cart__close")).click();
         //Thread.sleep(1500);
         action.click(cart.getRemoveProductsFromCart()).perform();
-        //Thread.sleep(1500);
-        //action.click(cart.getRemoveProductsFromCart()).build().perform();
-        //Thread.sleep(1500);
+        Thread.sleep(1500);
+        action.click(cart.getRemoveProductsFromCart()).build().perform();
+        Thread.sleep(1500);
         action.click(homepage.getFoundationTabBtn()).perform();
         Thread.sleep(1500);
         Assert.assertTrue(homepage.getFoundationTabBtn().isDisplayed());
-
     }
 
     private boolean isDisplayed(WebElement element) {
