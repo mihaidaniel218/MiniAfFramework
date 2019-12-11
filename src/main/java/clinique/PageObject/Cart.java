@@ -47,7 +47,6 @@ public class Cart {
         return Utils.waitForElementPresence(driver, toBagIconBtn(), 30);
     }
 
-
     public WebElement getProductsInCart() {
         return Utils.waitForElementPresence(driver, ProductsInCart, 30);
     }
