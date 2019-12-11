@@ -36,7 +36,7 @@ public class ShopWorkFlow {
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         action = new Actions(driver);
 
@@ -45,8 +45,9 @@ public class ShopWorkFlow {
         signinForm = new clinique.PageObject.SignInForm(driver);
         foundation = new Foundation(driver);
 
-        String baseUrl = "https://e.clinique.na.us.stage.ncsa.elcdev.net/account/index.tmpl";
+        String baseUrl = "https://clinique:5upuq%ic@e.clinique.na.us.stage.ncsa.elcdev.net/account/index.tmpl";
         driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
         driver.navigate().to(baseUrl);
 /*        action.sendKeys("clinique").build().perform();
         action.sendKeys(Keys.TAB).build().perform();
@@ -99,7 +100,7 @@ public class ShopWorkFlow {
     }
     @Test(priority = 2)
     public void buyProduct() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver,50);
+        WebDriverWait wait = new WebDriverWait(driver,10);
 
         action.sendKeys(Keys.ESCAPE).build().perform();
         Assert.assertTrue(homepage.getFoundationTabBtn().isDisplayed());
@@ -126,24 +127,13 @@ public class ShopWorkFlow {
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getAddToBagBtn()));
         action.click(foundation.getAddToBagBtn()).perform();
 
-/*        if(driver.findElement(By.cssSelector(".lpc_maximized-header__close-button-asset")).isDisplayed()) {
-            driver.findElement(By.cssSelector(".lpc_maximized-header__close-button-asset")).click();
-        };
-
-        if(driver.findElement(By.cssSelector(".lp_close_survey_button.lpc_desktop.lpc_survey-area__close-button")).isDisplayed()) {
-            driver.findElement(By.cssSelector(".lp_close_survey_button.lpc_desktop.lpc_survey-area__close-button")).click();
-        };*/
 /*        System.out.println(driver.switchTo().alert().getText());
         driver.switchTo().alert().dismiss();*/
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn-primary")));
-        Thread.sleep(3500);
+        Thread.sleep(2000);
 
         try{
-            WebElement element = driver.findElement(By.cssSelector(".lpc_maximized-header__close-button-asset"));
-            if(isDisplayed(element) && isEnabled(element)){
-                element.click(); // here i want if  element.click(); command
-            }
-            element = driver.findElement(By.cssSelector(".lp_close_survey_button.lpc_desktop.lpc_survey-area__close-button"));
+           WebElement element = driver.findElement(By.xpath("//*[@id='lpChat']/div[2]/div[1]/div/div[3]/button[3]"));
             if(isDisplayed(element) && isEnabled(element)){
                 element.click(); // here i want if  element.click(); command
             }
@@ -152,11 +142,9 @@ public class ShopWorkFlow {
             System.out.print(e.getMessage());
         }
 
-
-
-        Thread.sleep(2500);
+        Thread.sleep(1500);
         driver.findElement(By.cssSelector(".btn-primary")).click();
-        Thread.sleep(3500);
+        //Thread.sleep(3500);
 
         wait.until(ExpectedConditions.visibilityOf(cart.getProductsInCart()));
         Assert.assertTrue(cart.getProductsInCart().isDisplayed());
