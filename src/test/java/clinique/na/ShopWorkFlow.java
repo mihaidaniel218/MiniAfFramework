@@ -25,8 +25,6 @@ public class ShopWorkFlow {
 
     private WebDriver driver;
     private Actions action;
-
-
     private Cart cart;
     private Foundation foundation;
     private SignInForm signinForm;
@@ -49,19 +47,6 @@ public class ShopWorkFlow {
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.navigate().to(baseUrl);
-/*        action.sendKeys("clinique").build().perform();
-        action.sendKeys(Keys.TAB).build().perform();
-        action.sendKeys("5upuq%ic").build().perform();
-        action.sendKeys(Keys.ENTER).build().perform();*/
-
-
-        //https://e.clinique.na.us.stage.ncsa.elcdev.net/account/index.tmpl
-//Selenium-WebDriver Java Code for entering Username & Password as below:
-        /*driver.switchTo().alert();
-        driver.findElement(By.id("userID")).sendKeys("clinique");
-        driver.findElement(By.id("password")).sendKeys("5upuq%ic");
-        driver.switchTo().alert().accept();
-        driver.switchTo().defaultContent();*/
     }
 
     @AfterClass
@@ -147,13 +132,9 @@ public class ShopWorkFlow {
         action.click(cart.getBagIconBtn()).build().perform();
         Thread.sleep(1500);
         Assert.assertEquals(cart.getQuantityOfProductsInCart().getText(), cart.getNumberOfProductsInCart().getText());
-        //Thread.sleep(1500);
 
         Thread.sleep(1500);
-        //wait.until(ExpectedConditions.elementToBeClickable(cart.getCloseCartModal()));
-        //action.click(cart.getCloseCartModal()).build().perform();
         driver.findElement(By.cssSelector(".js-header-gnav-cart__close")).click();
-        //Thread.sleep(1500);
         action.click(cart.getRemoveProductsFromCart()).perform();
         Thread.sleep(1500);
         action.click(cart.getRemoveProductsFromCart()).build().perform();

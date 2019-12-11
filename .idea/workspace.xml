@@ -4,6 +4,7 @@
     <list default="true" id="e8250031-a3e3-4737-8438-c0a48aa1c942" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Foundation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Foundation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/clinique/PageObject/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/clinique/PageObject/Cart.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/clinique/na/ShopWorkFlow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/clinique/na/ShopWorkFlow.class" afterDir="false" />
@@ -304,16 +305,5 @@
     <MESSAGE value="Updated feature steps and tests" />
     <MESSAGE value="Updated select clothes test" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated select clothes test" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>134</line>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
