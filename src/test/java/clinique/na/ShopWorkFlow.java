@@ -34,7 +34,7 @@ public class ShopWorkFlow {
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
         action = new Actions(driver);
 
@@ -62,7 +62,7 @@ public class ShopWorkFlow {
         action.sendKeys(Keys.ESCAPE).build().perform();
         Thread.sleep(1500);
         action.sendKeys(Keys.ESCAPE).build().perform();
-        Thread.sleep(1500);
+        Thread.sleep(3000);
         signinForm.setEmailField("mdaniel219test@mailinator.com");
         Thread.sleep(1500);
         signinForm.setPasswordField("cliniqueCL22");
