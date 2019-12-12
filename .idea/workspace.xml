@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8250031-a3e3-4737-8438-c0a48aa1c942" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/MiniAfFramework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Foundation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Foundation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinique/PageObject/Homepage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/clinique/PageObject/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/clinique/PageObject/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/clinique/PageObject/Foundation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/clinique/PageObject/Foundation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/clinique/PageObject/Homepage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/clinique/PageObject/Homepage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/clinique/na/ShopWorkFlow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/clinique/na/ShopWorkFlow.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +54,13 @@
   </component>
   <component name="ProjectId" id="1TElzkxlujHsewKpMPLyeYpSpGR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -66,19 +79,7 @@
       <recent name="D:\Projects\MiniAfFramework\src\test\java\CucumberFramework\steps" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="TestNG.ShopWorkFlow">
+  <component name="RunManager" selected="TestNG.ShopWorkFlow (1)">
     <configuration name="TestRunner" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="automationpractice.com" />
       <extension name="coverage">
@@ -96,16 +97,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateAccountFormTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="automationpractice.com" />
+    <configuration name="ShopWorkFlow (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MiniAfFramework" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="automationpractice.com.*" />
+          <option name="PATTERN" value="clinique.na.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="automationpractice.com" />
-      <option name="MAIN_CLASS_NAME" value="automationpractice.com.CreateAccountFormTest" />
+      <option name="PACKAGE_NAME" value="clinique.na" />
+      <option name="MAIN_CLASS_NAME" value="clinique.na.ShopWorkFlow" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -228,13 +229,25 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ShopWorkFlow (1)" />
         <item itemvalue="TestNG.ShopWorkFlow" />
         <item itemvalue="TestNG.ShopWorkFlow.buyProduct (1)" />
         <item itemvalue="TestNG.ShopWorkFlow.buyProduct" />
         <item itemvalue="TestNG.ShopWorkFlow.loginUser" />
-        <item itemvalue="TestNG.CreateAccountFormTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -303,15 +316,91 @@
     <MESSAGE value="Updated select clothes test" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated select clothes test" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="484" y="198" key="#Notifications" timestamp="1576138637364">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="484" y="198" key="#Notifications/-1920.7.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1576138637364" />
+    <state x="-1523" y="214" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576140698922">
+      <screen x="-1920" y="7" width="1920" height="1080" />
+    </state>
+    <state x="-1523" y="214" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.7.1920.1080/0.0.1920.1080@-1920.7.1920.1080" timestamp="1576140698922" />
+    <state x="-1020" y="492" width="885" height="595" key="#xdebugger.evaluate" timestamp="1576139886617">
+      <screen x="-1920" y="7" width="1920" height="1080" />
+    </state>
+    <state x="-1020" y="492" width="885" height="595" key="#xdebugger.evaluate/-1920.7.1920.1080/0.0.1920.1080@-1920.7.1920.1080" timestamp="1576139886617" />
+    <state width="1215" height="352" key="GridCell.Tab.0.bottom" timestamp="1576145280708">
+      <screen x="-1920" y="7" width="1920" height="1080" />
+    </state>
+    <state width="1215" height="352" key="GridCell.Tab.0.bottom/-1920.7.1920.1080/0.0.1920.1080@-1920.7.1920.1080" timestamp="1576145280708" />
+    <state width="1215" height="352" key="GridCell.Tab.0.center" timestamp="1576145280708">
+      <screen x="-1920" y="7" width="1920" height="1080" />
+    </state>
+    <state width="1215" height="352" key="GridCell.Tab.0.center/-1920.7.1920.1080/0.0.1920.1080@-1920.7.1920.1080" timestamp="1576145280708" />
+    <state width="1215" height="352" key="GridCell.Tab.0.left" timestamp="1576145280708">
+      <screen x="-1920" y="7" width="1920" height="1080" />
+    </state>
+    <state width="1215" height="352" key="GridCell.Tab.0.left/-1920.7.1920.1080/0.0.1920.1080@-1920.7.1920.1080" timestamp="1576145280708" />
+    <state width="1215" height="352" key="GridCell.Tab.0.right" timestamp="1576145280708">
+      <screen x="-1920" y="7" width="1920" height="1080" />
+    </state>
+    <state width="1215" height="352" key="GridCell.Tab.0.right/-1920.7.1920.1080/0.0.1920.1080@-1920.7.1920.1080" timestamp="1576145280708" />
+    <state width="1215" height="352" key="GridCell.Tab.1.bottom" timestamp="1576145246169">
+      <screen x="-1920" y="7" width="1920" height="1080" />
+    </state>
+    <state width="1215" height="352" key="GridCell.Tab.1.bottom/-1920.7.1920.1080/0.0.1920.1080@-1920.7.1920.1080" timestamp="1576145246169" />
+    <state width="1215" height="352" key="GridCell.Tab.1.center" timestamp="1576145246169">
+      <screen x="-1920" y="7" width="1920" height="1080" />
+    </state>
+    <state width="1215" height="352" key="GridCell.Tab.1.center/-1920.7.1920.1080/0.0.1920.1080@-1920.7.1920.1080" timestamp="1576145246169" />
+    <state width="1215" height="352" key="GridCell.Tab.1.left" timestamp="1576145246169">
+      <screen x="-1920" y="7" width="1920" height="1080" />
+    </state>
+    <state width="1215" height="352" key="GridCell.Tab.1.left/-1920.7.1920.1080/0.0.1920.1080@-1920.7.1920.1080" timestamp="1576145246169" />
+    <state width="1215" height="352" key="GridCell.Tab.1.right" timestamp="1576145246169">
+      <screen x="-1920" y="7" width="1920" height="1080" />
+    </state>
+    <state width="1215" height="352" key="GridCell.Tab.1.right/-1920.7.1920.1080/0.0.1920.1080@-1920.7.1920.1080" timestamp="1576145246169" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
-          <line>133</line>
+          <line>136</line>
           <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>141</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>146</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/clinique/na/ShopWorkFlow.java</url>
+          <line>148</line>
+          <option name="timeStamp" value="97" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MiniAfFramework$ShopWorkFlow__1_.ic" NAME="ShopWorkFlow (1) Coverage Results" MODIFIED="1576141825091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>clinique.na.*</FILTER>
+    </SUITE>
   </component>
 </project>

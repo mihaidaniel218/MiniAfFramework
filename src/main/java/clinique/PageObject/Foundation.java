@@ -18,7 +18,8 @@ public class Foundation {
     private By ShadeLevel4 = By.cssSelector("[class] [class] [color='\\#DCB286']:nth-child(3)");
     private By ShadeLevel5 = By.cssSelector("[class] [class] [color='\\#D5A179']:nth-child(2)");
     private By ShadeLevel6 = By.cssSelector("[class] [class] [color='\\#D7AA8E']:nth-child(2)");
-    private By AddToBagShadeBtn = By.cssSelector("[class='ProductShadesSidebarContent__StyledAddToBagButton-u5w55u-13 iTPdRG ProductFullAddToBagButton__Wrapper-injdp6-0 NppMt'] [data-test-id]");
+    private By AddToBagShadeBtn = By.cssSelector("[class='ProductShadesSidebarContent__StyledProductCTA-u5w55u-13 emThhZ ProductCTA__Wrapper-sc-1vv0h1l-3 ApDfJ'] [aria-label]");
+    private By CloseShadeModalBtn = By.xpath("//div[@class='elc-remove-icon elc-product-shades-view-close-button-icon js-product-shades-view-close-button-icon Icon__MaskIconPlaceholder-i5m08e-1 NisyT Icon__IconPlaceholder-i5m08e-0 VtDHd']");
     private By CloseCliniqueSmartRewards = By.xpath("//*[@id='foreground-node']/div[1]/a");
     private By Quantity = By.xpath("//div[@safeclass~'\\bdxkWNN\\b.*\\belc-spinner-selector-data-wrapper\\b.*\\bjs-spinner-selector-data-wrapper\\b']/h6[@innertext='1']");
     private By IncreaseQuantity = By.xpath("//div[@safeclass~'\bdxkWNN\b.*\belc-spinner-selector-data-wrapper\b.*\bjs-spinner-selector-data-wrapper\b']/h6[@innertext='1']");
@@ -26,6 +27,10 @@ public class Foundation {
     private By CloseChatBtn = By.xpath("/html/body/div[13]/table//a/img[@alt='Close chat']");
     public Foundation(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public WebElement getCloseShadeModalBtn() {
+        return Utils.waitForElementPresence(driver, CloseShadeModalBtn, 30);
     }
 
     public WebElement getFoundationsBanner() {

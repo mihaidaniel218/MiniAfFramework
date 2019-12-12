@@ -21,7 +21,7 @@ public class Homepage {
     }
 
     public WebElement getFoundationTabBtn() {
-        return utils.Utils.waitToBeClickable(driver, By.xpath("//a[@class='header-gnav-section__link js-header-gnav-section__link--direct'][contains(text(),'Foundation')]"), 30);
+        return utils.Utils.waitToBeClickable(driver, By.cssSelector(".gnav-header-formatter__sections.gnav-header-formatter__sections--pc.js-gnav-header-formatter__sections--pc > a:nth-of-type(5)"), 30);
     }
 
     public WebElement getFooterBanners() {

@@ -21,7 +21,9 @@ public class Cart {
     private By ItemsInCart = By.xpath("//div[@class='left-copy']//span[contains(text(),'2')]");
     private By ProductName = By.xpath("//h3[@class='cart-product-name']//a[contains(text(),'Almost Powder Makeup Broad Spectrum SPF 18')]");
     private By ChatPopup = By.xpath("//img[@alt='Close chat']");
-    private By CloseCartModal = By.cssSelector(".js-header-gnav-cart__close");
+    private By CloseCartModal = By.cssSelector(".header-gnav-cart.js-header-gnav-cart-v1  .gnav-header-formatter__close > svg[role='img']");
+    // cssSelector = [class='svgicon svgicon--x-16 hide_auth gnav-header-formatter__close-icon js-header-gnav-cart__close']
+    //.js-header-gnav-cart__close
 
     public Cart(WebDriver driver) {
         this.driver = driver;

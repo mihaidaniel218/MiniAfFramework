@@ -64,6 +64,7 @@ public class ShopWorkFlow {
         action.sendKeys(Keys.ESCAPE).build().perform();
         Thread.sleep(1500);
         signinForm.setEmailField("mdaniel219test@mailinator.com");
+        Thread.sleep(1500);
         signinForm.setPasswordField("cliniqueCL22");
         action.sendKeys(Keys.ESCAPE).build().perform();
         action.click(signinForm.getSignInTermsAnsConditionsBtn()).build();
@@ -109,8 +110,10 @@ public class ShopWorkFlow {
         action.click(foundation.getShadeLevel5()).build().perform();
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getAddToBagShadeBtn()));
         action.click(foundation.getAddToBagShadeBtn()).build().perform();
-        wait.until(ExpectedConditions.elementToBeClickable(foundation.getAddToBagBtn()));
-        action.click(foundation.getAddToBagBtn()).perform();
+        wait.until(ExpectedConditions.elementToBeClickable(foundation.getCloseShadeModalBtn()));
+        action.click(foundation.getCloseShadeModalBtn()).build().perform();
+        //wait.until(ExpectedConditions.elementToBeClickable(foundation.getAddToBagBtn()));
+        //action.click(foundation.getAddToBagBtn()).perform();
 
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn-primary")));
         Thread.sleep(2000);
@@ -134,10 +137,12 @@ public class ShopWorkFlow {
         Assert.assertEquals(cart.getQuantityOfProductsInCart().getText(), cart.getNumberOfProductsInCart().getText());
 
         Thread.sleep(1500);
+/*        wait.until(ExpectedConditions.elementToBeClickable(cart.getCloseCartModal()));
+        action.click(cart.getCloseCartModal()).moveToElement(cart.getCloseCartModal()).build().perform();*/
         driver.findElement(By.cssSelector(".js-header-gnav-cart__close")).click();
         action.click(cart.getRemoveProductsFromCart()).perform();
         Thread.sleep(1500);
-        action.click(cart.getRemoveProductsFromCart()).build().perform();
+        //action.click(cart.getRemoveProductsFromCart()).build().perform();
         Thread.sleep(1500);
         action.click(homepage.getFoundationTabBtn()).perform();
         Thread.sleep(1500);
