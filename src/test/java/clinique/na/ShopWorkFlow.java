@@ -142,7 +142,7 @@ public class ShopWorkFlow {
         driver.findElement(By.cssSelector(".js-header-gnav-cart__close")).click();
         action.click(cart.getRemoveProductsFromCart()).perform();
         Thread.sleep(1500);
-        //action.click(cart.getRemoveProductsFromCart()).build().perform();
+        action.click(cart.getRemoveProductsFromCart()).build().perform();
         Thread.sleep(1500);
         action.click(homepage.getFoundationTabBtn()).perform();
         Thread.sleep(1500);

@@ -28,6 +28,7 @@ public class SignInForm {
     private By PasswordRequiredError = By.xpath("//li[contains(text(),'Password is required.')]");
     private By InvalidPasswordError = By.xpath("//li[contains(text(), \"Invalid password\")]");
     private By EmailHighlightedRed = By.xpath("//div[@class='form-group form-error']");
+
     public SignInForm(WebDriver driver) {
         this.driver = driver;
     }
