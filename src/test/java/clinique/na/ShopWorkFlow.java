@@ -92,18 +92,48 @@ public class ShopWorkFlow {
         Assert.assertTrue(homepage.getFoundationTabBtn().isDisplayed());
         action.moveToElement(homepage.getFoundationTabBtn()).perform();
 
+        foundationSetup();
+
+        shadeSelection();
+
+        cartOperations();
+ 
+        action.click(homepage.getFoundationTabBtn()).perform();
+        Thread.sleep(1500);
+        Assert.assertTrue(homepage.getFoundationTabBtn().isDisplayed());
+    }
+
+    private boolean isDisplayed(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    private boolean isEnabled(WebElement element) {
+        try {
+            return element.isEnabled();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private void foundationSetup() {
+        WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.elementToBeClickable(homepage.getFoundationTabBtn()));
         action.click(homepage.getFoundationTabBtn()).build().perform();
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getCloseCliniqueSmartRewards()));
         action.click(foundation.getCloseCliniqueSmartRewards()).build().perform();
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getFoundationsBanner()));
-
         Assert.assertTrue(foundation.getFoundationsBanner().isDisplayed());
         wait.until(ExpectedConditions.visibilityOf(foundation.getNewProduct()));
         Assert.assertTrue(foundation.getNewProduct().isDisplayed());
-
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getNewProduct()));
         action.click(foundation.getNewProduct()).build().perform();
+    }
+
+    private void shadeSelection() {
+        WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getProductShade()));
         action.click(foundation.getProductShade()).build().perform();
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getShadeLevel5()));
@@ -112,9 +142,10 @@ public class ShopWorkFlow {
         action.click(foundation.getAddToBagShadeBtn()).build().perform();
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getCloseShadeModalBtn()));
         action.click(foundation.getCloseShadeModalBtn()).build().perform();
-        //wait.until(ExpectedConditions.elementToBeClickable(foundation.getAddToBagBtn()));
-        //action.click(foundation.getAddToBagBtn()).perform();
+    }
 
+    private void cartOperations() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn-primary")));
         Thread.sleep(2000);
         Cart cart2 = new Cart(driver);
@@ -137,31 +168,11 @@ public class ShopWorkFlow {
         Assert.assertEquals(cart.getQuantityOfProductsInCart().getText(), cart.getNumberOfProductsInCart().getText());
 
         Thread.sleep(1500);
-/*        wait.until(ExpectedConditions.elementToBeClickable(cart.getCloseCartModal()));
-        action.click(cart.getCloseCartModal()).moveToElement(cart.getCloseCartModal()).build().perform();*/
         driver.findElement(By.cssSelector(".js-header-gnav-cart__close")).click();
         action.click(cart.getRemoveProductsFromCart()).perform();
         Thread.sleep(1500);
         action.click(cart.getRemoveProductsFromCart()).build().perform();
         Thread.sleep(1500);
-        action.click(homepage.getFoundationTabBtn()).perform();
-        Thread.sleep(1500);
-        Assert.assertTrue(homepage.getFoundationTabBtn().isDisplayed());
-    }
-
-    private boolean isDisplayed(WebElement element) {
-        try {
-            return element.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-    private boolean isEnabled(WebElement element) {
-        try {
-            return element.isEnabled();
-        } catch (Exception e) {
-            return false;
-        }
     }
 
 }
