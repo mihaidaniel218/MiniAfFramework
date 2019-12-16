@@ -91,13 +91,13 @@ public class ShopWorkFlow {
         action.sendKeys(Keys.ESCAPE).build().perform();
         Assert.assertTrue(homepage.getFoundationTabBtn().isDisplayed());
         action.moveToElement(homepage.getFoundationTabBtn()).perform();
-
+    // Set up Foundation stage
         foundationSetup();
-
+        // Select a shade for the selected product
         shadeSelection();
-
+        //Cart flow operations for the chosen product
         cartOperations();
- 
+
         action.click(homepage.getFoundationTabBtn()).perform();
         Thread.sleep(1500);
         Assert.assertTrue(homepage.getFoundationTabBtn().isDisplayed());
@@ -119,7 +119,7 @@ public class ShopWorkFlow {
     }
 
     private void foundationSetup() {
-        WebDriverWait wait = new WebDriverWait(driver,10);
+        WebDriverWait wait = new WebDriverWait(driver,20);
         wait.until(ExpectedConditions.elementToBeClickable(homepage.getFoundationTabBtn()));
         action.click(homepage.getFoundationTabBtn()).build().perform();
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getCloseCliniqueSmartRewards()));
@@ -133,7 +133,7 @@ public class ShopWorkFlow {
     }
 
     private void shadeSelection() {
-        WebDriverWait wait = new WebDriverWait(driver,10);
+        WebDriverWait wait = new WebDriverWait(driver,20);
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getProductShade()));
         action.click(foundation.getProductShade()).build().perform();
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getShadeLevel5()));
@@ -149,24 +149,20 @@ public class ShopWorkFlow {
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn-primary")));
         Thread.sleep(2000);
         Cart cart2 = new Cart(driver);
-
         try {
             if (cart2.checkToCloseButton())
                 cart2.clickToCloseButton();
         } catch (Exception e) {
             System.out.print(e.getMessage());
         }
-
         Thread.sleep(1500);
         driver.findElement(By.cssSelector(".btn-primary")).click();
-
         wait.until(ExpectedConditions.visibilityOf(cart.getProductsInCart()));
         Assert.assertTrue(cart.getProductsInCart().isDisplayed());
         wait.until(ExpectedConditions.elementToBeClickable(cart.getBagIconBtn()));
         action.click(cart.getBagIconBtn()).build().perform();
         Thread.sleep(1500);
         Assert.assertEquals(cart.getQuantityOfProductsInCart().getText(), cart.getNumberOfProductsInCart().getText());
-
         Thread.sleep(1500);
         driver.findElement(By.cssSelector(".js-header-gnav-cart__close")).click();
         action.click(cart.getRemoveProductsFromCart()).perform();
