@@ -91,9 +91,9 @@ public class ShopWorkFlow {
         action.sendKeys(Keys.ESCAPE).build().perform();
         Assert.assertTrue(homepage.getFoundationTabBtn().isDisplayed());
         action.moveToElement(homepage.getFoundationTabBtn()).perform();
-    // Set up Foundation stage
+     // Set up Foundation stage
         foundationSetup();
-        // Select a shade for the selected product
+        // Choose a shade for the selected product
         shadeSelection();
         //Cart flow operations for the chosen product
         cartOperations();
