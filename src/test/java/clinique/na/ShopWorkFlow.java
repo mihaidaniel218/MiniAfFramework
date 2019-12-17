@@ -20,7 +20,6 @@ import clinique.PageObject.Homepage;
 
 import java.util.concurrent.TimeUnit;
 
-
 public class ShopWorkFlow {
 
     private WebDriver driver;
@@ -75,7 +74,7 @@ public class ShopWorkFlow {
         Thread.sleep(1500);
         action.click(signinForm.getJoinNowBtn()).build().perform();
         Thread.sleep(1500);
-        if(signinForm.getAccountExistsWarning().isDisplayed()) {
+        if (signinForm.getAccountExistsWarning().isDisplayed()) {
             Thread.sleep(500);
             signinForm.setReturnPasswordField("cliniqueCL22");
             Thread.sleep(500);
@@ -84,42 +83,30 @@ public class ShopWorkFlow {
             action.click(signinForm.getReturnSignInBtn()).build().perform();
         }
     }
+
     @Test(priority = 2)
     public void buyProduct() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver,10);
-
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         action.sendKeys(Keys.ESCAPE).build().perform();
         Assert.assertTrue(homepage.getFoundationTabBtn().isDisplayed());
         action.moveToElement(homepage.getFoundationTabBtn()).perform();
-     // Set up Foundation stage
+        // Set up Foundation stage
         foundationSetup();
         // Choose a shade for the selected product
         shadeSelection();
         //Cart flow operations for the chosen product
         cartOperations();
-
+        // Back to Foundation page
         action.click(homepage.getFoundationTabBtn()).perform();
-        Thread.sleep(1500);
+        //Thread.sleep(1500);
+        wait.until(ExpectedConditions.elementToBeClickable(homepage.getFoundationTabBtn()));
         Assert.assertTrue(homepage.getFoundationTabBtn().isDisplayed());
-    }
-
-    private boolean isDisplayed(WebElement element) {
-        try {
-            return element.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-    private boolean isEnabled(WebElement element) {
-        try {
-            return element.isEnabled();
-        } catch (Exception e) {
-            return false;
-        }
+        wait.until(ExpectedConditions.elementToBeClickable(foundation.getFoundationsBanner()));
+        Assert.assertTrue(foundation.getFoundationsBanner().isDisplayed());
     }
 
     private void foundationSetup() {
-        WebDriverWait wait = new WebDriverWait(driver,20);
+        WebDriverWait wait = new WebDriverWait(driver, 20);
         wait.until(ExpectedConditions.elementToBeClickable(homepage.getFoundationTabBtn()));
         action.click(homepage.getFoundationTabBtn()).build().perform();
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getCloseCliniqueSmartRewards()));
@@ -133,7 +120,7 @@ public class ShopWorkFlow {
     }
 
     private void shadeSelection() {
-        WebDriverWait wait = new WebDriverWait(driver,20);
+        WebDriverWait wait = new WebDriverWait(driver, 20);
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getProductShade()));
         action.click(foundation.getProductShade()).build().perform();
         wait.until(ExpectedConditions.elementToBeClickable(foundation.getShadeLevel5()));
@@ -145,11 +132,12 @@ public class ShopWorkFlow {
     }
 
     private void cartOperations() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn-primary")));
-        Thread.sleep(2000);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        Thread.sleep(1000);
         Cart cart2 = new Cart(driver);
         try {
+            WebDriverWait customWait = new WebDriverWait(driver, 2); //2 is for seconds before timingout
+            customWait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".btn-primary")));
             if (cart2.checkToCloseButton())
                 cart2.clickToCloseButton();
         } catch (Exception e) {
@@ -169,6 +157,22 @@ public class ShopWorkFlow {
         Thread.sleep(1500);
         action.click(cart.getRemoveProductsFromCart()).build().perform();
         Thread.sleep(1500);
+    }
+
+    private boolean isDisplayed(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private boolean isEnabled(WebElement element) {
+        try {
+            return element.isEnabled();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 }
