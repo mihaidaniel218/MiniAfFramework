@@ -138,7 +138,6 @@ public class ShopWorkFlow {
         try {
             WebDriverWait customWait = new WebDriverWait(driver, 2); //2 is for seconds before timingout
             customWait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".btn-primary")));
-            if (cart2.checkToCloseButton())
                 cart2.clickToCloseButton();
         } catch (Exception e) {
             System.out.print(e.getMessage());
