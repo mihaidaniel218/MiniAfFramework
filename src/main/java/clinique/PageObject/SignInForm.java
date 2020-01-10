@@ -80,11 +80,9 @@ public class SignInForm {
         return Utils.waitForElementPresence(driver, AccountExistsWarning, 30);
     }
 
-
     public WebElement getReturnEmailField() {
         return Utils.waitForElementPresence(driver, ReturnEmailField, 30);
     }
-
 
     public WebElement getReturnPasswordField() {
         return Utils.waitForElementPresence(driver, ReturnPasswordField, 30);
@@ -105,21 +103,17 @@ public class SignInForm {
         return Utils.waitForElementPresence(driver, EmailRequiredError, 30);
     }
 
-
     public WebElement getEmailInvalidError() {
         return Utils.waitForElementPresence(driver, EmailInvalidError, 30);
     }
-
 
     public WebElement getAuthenticationFailedError() {
         return Utils.waitForElementPresence(driver, AuthenticationFailedError, 30);
     }
 
-
     public WebElement getPasswordRequiredError() {
         return Utils.waitForElementPresence(driver, PasswordRequiredError, 30);
     }
-
 
     public WebElement getInvalidPasswordError() {
         return Utils.waitForElementPresence(driver, InvalidPasswordError, 30);
